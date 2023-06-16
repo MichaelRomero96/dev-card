@@ -1,7 +1,7 @@
 import React from "react";
 import "./components/css/normalize.css";
 import "./components/css/sidebar.css";
-import profileImg from './components/mock/profile.png';
+import profileImg from "./components/mock/profile.png";
 import {
     FaTwitter,
     FaLinkedinIn,
@@ -66,7 +66,8 @@ const Aside = () => {
                 <ul className="anclas">
                     <li className="anclas__links">
                         <a className="anclas__icons" href="#">
-                            <FaUser className="anclas__icon" />About Me
+                            <FaUser className="anclas__icon" />
+                            About Me
                         </a>
                     </li>
                     <li className="anclas__links">
