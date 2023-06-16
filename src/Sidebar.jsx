@@ -1,6 +1,6 @@
 import React from "react";
 import "./components/css/normalize.css";
-import "./components/css/style.css";
+import "./components/css/sidebar.css";
 import profileImg from "./components/img/profile.png";
 import {
     FaTwitter,
@@ -60,49 +60,49 @@ const Aside = () => {
                         </a>
                     </li>
                 </ul>
+                <hr />
             </article>
             <article>
                 <ul className="anclas">
                     <li className="anclas__links">
-                        <FaUser className="anclas__icon" />
                         <a className="anclas__icons" href="#">
-                            About Me
+                            <FaUser className="anclas__icon" />About Me
                         </a>
                     </li>
                     <li className="anclas__links">
-                        <FaLaptopCode className="anclas__icon" />
                         <a className="anclas__icons" href="#">
+                            <FaLaptopCode className="anclas__icon" />
                             Portfolio
                         </a>
                     </li>
                     <li className="anclas__links">
-                        <FaToolbox className="anclas__icon" />
                         <a className="anclas__icons" href="#">
+                            <FaToolbox className="anclas__icon" />
                             Sevices & Pricing
                         </a>
                     </li>
                     <li className="anclas__links">
-                        <FaFileAlt className="anclas__icon" />
                         <a className="anclas__icons" href="#">
+                            <FaFileAlt className="anclas__icon" />
                             Resume
                         </a>
                     </li>
                     <li className="anclas__links">
-                        <FaBlog className="anclas__icon" />
                         <a className="anclas__icons" href="#">
+                            <FaBlog className="anclas__icon" />
                             Blog
                         </a>
                     </li>
                     <li className="anclas__links">
-                        <FaEnvelopeOpenText className="anclas__icon" />
                         <a className="anclas__icons" href="#">
+                            <FaEnvelopeOpenText className="anclas__icon" />
                             Contact
                         </a>
                     </li>
                     <div>
                         <details className="info-extra">
                             <summary>
-                                <FaCog className="anclas__icons" /> More Pages{" "}
+                                <FaCog className="anclas__icons" /> More Pages
                                 <FaCaretDown className="icon-arrow" />
                             </summary>
                             <ul className="details">
@@ -132,16 +132,24 @@ const Aside = () => {
                 </ul>
             </article>
             <article>
-                <button className="btn">
-                    <a href="#">
-                        <FaPaperPlane className="icon-paperplane" /> Hire Me
-                    </a>
-                </button>
-                <div className="darkmode">
-                    <FaAdjust className="anclas__icons icon-darkmode" /> Dark
-                    Mode
+                <div>
+                    <button className="btn">
+                        <a href="#">
+                            <FaPaperPlane className="icon-paperplane" /> Hire Me
+                        </a>
+                    </button>
                 </div>
-                <input type="checkbox" />
+                <hr className="btn-darkmode" />
+                <div>
+                    <h4 className="darkmode">
+                        <FaAdjust className="anclas__icons icon-darkmode" />{" "}
+                        Dark Mode
+                    </h4>
+                    <label class="switch">
+                        <input type="checkbox" />
+                        <span class="slider"></span>
+                    </label>
+                </div>
             </article>
         </section>
     );
