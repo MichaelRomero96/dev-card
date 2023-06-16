@@ -50,7 +50,6 @@ const Aside = () => {
                         <a href="#">Contact</a>
                     </li>
                     <li>
-                        {" "}
                         More Pages
                         <ul>
                             <li>
@@ -74,7 +73,7 @@ const Aside = () => {
                     <a href="#">
                         <li>Hire Me</li>
                     </a>
-                </button>{" "}
+                </button>
                 <br />
                 <li>
                     Dark Mode <br />
