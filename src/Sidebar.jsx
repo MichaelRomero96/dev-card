@@ -1,7 +1,7 @@
 import React from "react";
 import "./components/css/normalize.css";
 import "./components/css/sidebar.css";
-import profileImg from "./components/img/profile.png";
+import profileImg from './components/mock/profile.png';
 import {
     FaTwitter,
     FaLinkedinIn,
