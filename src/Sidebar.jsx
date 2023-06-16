@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import "./components/css/normalize.css";
 import "./components/css/sidebar.css";
@@ -19,20 +20,19 @@ import {
     FaUser,
     FaCaretDown,
 } from "react-icons/fa";
+import data from "./data";
 
 const Aside = () => {
     return (
         <section className="body">
             <h1 className="header__title">
-                <a href="#">Simon Doe</a>
+                <a href="#">{data.user.name}</a>
             </h1>
             <article className="navbar">
-                <img className="profile" src={profileImg} alt="Profile Image" />
+                <img className="profile" src={profileImg} alt="Profile" />
                 <p className="description">
-                    Hi, my name is Simon Doe and I'm a senior software engineer.
-                    Welcome to my personal website!
+                   {data.user.description}
                 </p>
-                {/* Iconos */}
                 <ul className="redes">
                     <li className="redes__icons">
                         <a href="#">

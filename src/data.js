@@ -125,3 +125,7 @@ const latestPostsCards = [
         blogLink: 'https://themes.3rdwavemedia.com/devcard/bs5/2.0/blog-post.html',
     },
 ]
+
+const data = {user, technologies, servicesAndPricing, featuredProjects, latestPostsCards}
+
+export default data;
