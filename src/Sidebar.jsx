@@ -1,4 +1,5 @@
 import React from "react";
+import { FaTwitter, FaLinkedin, FaGithubAlt, FaCodepen, FaStackOverflow } from "react-icons/fa";
 
 const Aside = () => {
     return (
@@ -13,19 +14,19 @@ const Aside = () => {
                 {/* Iconos */}
                 <ul>
                     <li>
-                        <a href="#">Twitter</a>
+                        <a href="#"><FaTwitter/></a>
                     </li>
                     <li>
-                        <a href="#">Linkedin</a>
+                        <a href="#"> <FaLinkedin/> </a>
                     </li>
                     <li>
-                        <a href="#">GitHub</a>
+                        <a href="#"> <FaGithubAlt/> </a>
                     </li>
                     <li>
-                        <a href="#">Icono</a>
+                        <a href="#"> <FaStackOverflow/> </a>
                     </li>
                     <li>
-                        <a href="#">Icono</a>
+                        <a href="#"><FaCodepen/></a>
                     </li>
                 </ul>
             </article>
