@@ -1,31 +1,30 @@
 import React from "react";
 import "./components/css/normalize.css";
 import "./components/css/style.css";
-import profileImg from './components/img/profile.png';
+import profileImg from "./components/img/profile.png";
 import {
     FaTwitter,
-    FaLinkedin,
+    FaLinkedinIn,
     FaGithubAlt,
     FaCodepen,
     FaStackOverflow,
     FaAdjust,
     FaPaperPlane,
-    FaCogs,
+    FaCog,
     FaEnvelopeOpenText,
     FaBlog,
     FaFileAlt,
     FaToolbox,
     FaLaptopCode,
     FaUser,
+    FaCaretDown,
 } from "react-icons/fa";
 
 const Aside = () => {
     return (
         <section className="body">
             <h1 className="header__title">
-                <a href="#">
-                    Simon Doe
-                </a>
+                <a href="#">Simon Doe</a>
             </h1>
             <article className="navbar">
                 <img className="profile" src={profileImg} alt="Profile Image" />
@@ -37,86 +36,112 @@ const Aside = () => {
                 <ul className="redes">
                     <li className="redes__icons">
                         <a href="#">
-                            <FaTwitter/>
+                            <FaTwitter />
                         </a>
                     </li>
                     <li className="redes__icons">
                         <a href="#">
-                            <FaLinkedin/>
+                            <FaLinkedinIn />
                         </a>
                     </li>
                     <li className="redes__icons">
                         <a href="#">
-                            <FaGithubAlt/>
+                            <FaGithubAlt />
                         </a>
                     </li>
                     <li className="redes__icons">
                         <a href="#">
-                            <FaStackOverflow/>
+                            <FaStackOverflow />
                         </a>
                     </li>
                     <li className="redes__icons">
                         <a href="#">
-                            <FaCodepen/>
+                            <FaCodepen />
                         </a>
                     </li>
                 </ul>
             </article>
             <article>
-                <ul>
-                    <li>
-                        <FaUser />
-                        <a href="#">About Me</a>
+                <ul className="anclas">
+                    <li className="anclas__links">
+                        <FaUser className="anclas__icon" />
+                        <a className="anclas__icons" href="#">
+                            About Me
+                        </a>
                     </li>
-                    <li>
-                        <FaLaptopCode />
-                        <a href="#">Portfolio</a>
+                    <li className="anclas__links">
+                        <FaLaptopCode className="anclas__icon" />
+                        <a className="anclas__icons" href="#">
+                            Portfolio
+                        </a>
                     </li>
-                    <li>
-                        <FaToolbox />
-                        <a href="#">Sevices & Pricing</a>
+                    <li className="anclas__links">
+                        <FaToolbox className="anclas__icon" />
+                        <a className="anclas__icons" href="#">
+                            Sevices & Pricing
+                        </a>
                     </li>
-                    <li>
-                        <FaFileAlt />
-                        <a href="#">Resume</a>
+                    <li className="anclas__links">
+                        <FaFileAlt className="anclas__icon" />
+                        <a className="anclas__icons" href="#">
+                            Resume
+                        </a>
                     </li>
-                    <li>
-                        <FaBlog />
-                        <a href="#">Blog</a>
+                    <li className="anclas__links">
+                        <FaBlog className="anclas__icon" />
+                        <a className="anclas__icons" href="#">
+                            Blog
+                        </a>
                     </li>
-                    <li>
-                        <FaEnvelopeOpenText />
-                        <a href="#">Contact</a>
+                    <li className="anclas__links">
+                        <FaEnvelopeOpenText className="anclas__icon" />
+                        <a className="anclas__icons" href="#">
+                            Contact
+                        </a>
                     </li>
                     <div>
-                        <FaCogs /> More Pages
+                        <details className="info-extra">
+                            <summary>
+                                <FaCog className="anclas__icons" /> More Pages{" "}
+                                <FaCaretDown className="icon-arrow" />
+                            </summary>
+                            <ul className="details">
+                                <li>
+                                    <a className="details__info" href="#">
+                                        Project Page
+                                    </a>
+                                </li>
+                                <li>
+                                    <a className="details__info" href="#">
+                                        Blog Home 1
+                                    </a>
+                                </li>
+                                <li>
+                                    <a className="details__info" href="#">
+                                        Blog Home 2
+                                    </a>
+                                </li>
+                                <li>
+                                    <a className="details__info" href="#">
+                                        Blog Post
+                                    </a>
+                                </li>
+                            </ul>
+                        </details>
                     </div>
-                    <ul>
-                        <li>
-                            <a href="#">Project Page</a>
-                        </li>
-                        <li>
-                            <a href="#">Blog Home 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Blog Home 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Blog Post</a>
-                        </li>
-                    </ul>
                 </ul>
             </article>
             <article>
-                <button>
+                <button className="btn">
                     <a href="#">
-                        <FaPaperPlane /> Hire Me
+                        <FaPaperPlane className="icon-paperplane" /> Hire Me
                     </a>
                 </button>
-                <div>
-                    <FaAdjust /> Dark Mode
-                    <input type="checkbox" />
+                <div className="darkmode">
+                    <FaAdjust className="anclas__icons icon-darkmode" /> Dark
+                    Mode
                 </div>
+                <input type="checkbox" />
             </article>
         </section>
     );
