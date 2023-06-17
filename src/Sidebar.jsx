@@ -2,6 +2,8 @@ import React from "react";
 import "./components/css/normalize.css";
 import "./components/css/sidebar.css";
 import profileImg from "./components/mock/profile.png";
+import AboutMe from './AboutMe';
+import { Link } from "react-router-dom";
 import {
     FaTwitter,
     FaLinkedinIn,
@@ -35,29 +37,29 @@ const Aside = () => {
                 {/* Iconos */}
                 <ul className="redes">
                     <li className="redes__icons">
-                        <a href="#">
+                        <Link to="/twitter">
                             <FaTwitter />
-                        </a>
+                        </Link>
                     </li>
                     <li className="redes__icons">
-                        <a href="#">
+                        <Link to="/linkedin">
                             <FaLinkedinIn />
-                        </a>
+                        </Link>
                     </li>
                     <li className="redes__icons">
-                        <a href="#">
+                        <Link to="/github">
                             <FaGithubAlt />
-                        </a>
+                        </Link>
                     </li>
                     <li className="redes__icons">
-                        <a href="#">
+                        <Link to="overflow">
                             <FaStackOverflow />
-                        </a>
+                        </Link>
                     </li>
                     <li className="redes__icons">
-                        <a href="#">
+                        <Link to="codepen">
                             <FaCodepen />
-                        </a>
+                        </Link>
                     </li>
                 </ul>
                 <hr />
@@ -65,40 +67,40 @@ const Aside = () => {
             <article>
                 <ul className="anclas">
                     <li className="anclas__links">
-                        <a className="anclas__icons" href="#">
+                        <Link className="anclas__icons" to="/about-me">
                             <FaUser className="anclas__icon" />
                             About Me
-                        </a>
+                        </Link>
                     </li>
                     <li className="anclas__links">
-                        <a className="anclas__icons" href="#">
+                        <Link className="anclas__icons" to="/portfolio">
                             <FaLaptopCode className="anclas__icon" />
                             Portfolio
-                        </a>
+                        </Link>
                     </li>
                     <li className="anclas__links">
-                        <a className="anclas__icons" href="#">
+                        <Link className="anclas__icons" to="/sevices">
                             <FaToolbox className="anclas__icon" />
                             Sevices & Pricing
-                        </a>
+                        </Link>
                     </li>
                     <li className="anclas__links">
-                        <a className="anclas__icons" href="#">
+                        <Link className="anclas__icons" to="/resume">
                             <FaFileAlt className="anclas__icon" />
                             Resume
-                        </a>
+                        </Link>
                     </li>
                     <li className="anclas__links">
-                        <a className="anclas__icons" href="#">
+                        <Link className="anclas__icons" to="/blog">
                             <FaBlog className="anclas__icon" />
                             Blog
-                        </a>
+                        </Link>
                     </li>
                     <li className="anclas__links">
-                        <a className="anclas__icons" href="#">
+                        <Link className="anclas__icons" to="/contact">
                             <FaEnvelopeOpenText className="anclas__icon" />
                             Contact
-                        </a>
+                        </Link>
                     </li>
                     <div>
                         <details className="info-extra">
@@ -108,24 +110,30 @@ const Aside = () => {
                             </summary>
                             <ul className="details">
                                 <li>
-                                    <a className="details__info" href="#">
+                                    <Link
+                                        className="details__info"
+                                        to="/project-page"
+                                    >
                                         Project Page
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a className="details__info" href="#">
+                                    <Link className="details__info" to="/blog1">
                                         Blog Home 1
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a className="details__info" href="#">
+                                    <Link className="details__info" to="/blog2">
                                         Blog Home 2
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a className="details__info" href="#">
+                                    <Link
+                                        className="details__info"
+                                        to="/blog-post"
+                                    >
                                         Blog Post
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </details>
@@ -135,15 +143,15 @@ const Aside = () => {
             <article>
                 <div>
                     <button className="btn">
-                        <a href="#">
+                        <Link to="/hireme">
                             <FaPaperPlane className="icon-paperplane" /> Hire Me
-                        </a>
+                        </Link>
                     </button>
                 </div>
                 <hr className="btn-darkmode" />
                 <div>
                     <h4 className="darkmode">
-                        <FaAdjust className="anclas__icons icon-darkmode" />{" "}
+                        <FaAdjust className="anclas__icons icon-darkmode" />
                         Dark Mode
                     </h4>
                     <label class="switch">
