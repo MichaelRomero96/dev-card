@@ -26,12 +26,12 @@ const Aside = () => {
     return (
         <section className="body">
             <h1 className="header__title">
-                <a href="#">{data.user.name}</a>
+                <a href="#">{data.sidebar.name}</a>
             </h1>
             <article className="navbar">
                 <img className="profile" src={profileImg} alt="Profile" />
                 <p className="description">
-                   {data.user.description}
+                   {data.sidebar.description}
                 </p>
                 <ul className="redes">
                     <li className="redes__icons">

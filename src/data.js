@@ -7,6 +7,12 @@ const user = {
     biography: "https://themes.3rdwavemedia.com/devcard/bs5/2.0/resume.html",
 };
 
+const sidebar = {
+    name: "Simon Doe",
+    description:
+        "Hi, my name is Simon Doe and Im a senior software engineer. Welcome to my personal website!",
+};
+
 const technologies = [
     {
         name: "Vanilla JavaScript",
@@ -110,22 +116,35 @@ const featuredProjects = [
 
 const latestPostsCards = [
     {
-        title: 'Top 3 JavaScript Frameworks',
-        description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis',
-        blogLink: 'https://themes.3rdwavemedia.com/devcard/bs5/2.0/blog-post.html',
+        title: "Top 3 JavaScript Frameworks",
+        description:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis",
+        blogLink:
+            "https://themes.3rdwavemedia.com/devcard/bs5/2.0/blog-post.html",
     },
     {
-        title: 'About Remote Working',
-        description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis',
-        blogLink: 'https://themes.3rdwavemedia.com/devcard/bs5/2.0/blog-post.html',
+        title: "About Remote Working",
+        description:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis",
+        blogLink:
+            "https://themes.3rdwavemedia.com/devcard/bs5/2.0/blog-post.html",
     },
     {
-        title: 'A Guide to Becoming a Full-Stack Developer',
-        description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis',
-        blogLink: 'https://themes.3rdwavemedia.com/devcard/bs5/2.0/blog-post.html',
+        title: "A Guide to Becoming a Full-Stack Developer",
+        description:
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis",
+        blogLink:
+            "https://themes.3rdwavemedia.com/devcard/bs5/2.0/blog-post.html",
     },
-]
+];
 
-const data = {user, technologies, servicesAndPricing, featuredProjects, latestPostsCards}
+const data = {
+    user,
+    sidebar,
+    technologies,
+    servicesAndPricing,
+    featuredProjects,
+    latestPostsCards,
+};
 
 export default data;
