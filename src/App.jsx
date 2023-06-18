@@ -7,7 +7,7 @@ const App = () => {
   return (
     <Routes>
       <Route path='/' element={<Sidebar />} />
-      <Route path='/about-me' element={<AboutMe />} />
+      <Route path='/about-me' element={<AboutMe />} /> /* Elemento de Prueba, se puede eliminar */
     </Routes>
   )
 }
