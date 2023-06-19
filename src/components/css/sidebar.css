@@ -48,6 +48,11 @@ hr {
     color: #FFF;
 }
 
+.btn-busqueda {
+    /* visibility: hidden; */
+    display: none;
+}
+
 .navbar {
     padding: 1.3rem 1rem;
     padding-bottom: 0;
@@ -251,6 +256,7 @@ summary:hover {
 
     .btn-busqueda {
         all: unset;
+        display: block;
         position: absolute;
         border: 1px solid rgba(255, 255, 255, .8);
         padding: 0.3rem 0.6rem;

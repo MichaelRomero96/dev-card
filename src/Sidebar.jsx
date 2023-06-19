@@ -20,6 +20,7 @@ import {
     FaLaptopCode,
     FaUser,
     FaCaretDown,
+    FaBars,
 } from "react-icons/fa";
 import data from "./data";
 
