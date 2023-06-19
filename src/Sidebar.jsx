@@ -20,20 +20,23 @@ import {
     FaLaptopCode,
     FaUser,
     FaCaretDown,
+    FaBars,
 } from "react-icons/fa";
 import data from "./data";
 
 const Aside = () => {
     return (
         <section className="body">
+            <button id="open" className="btn-busqueda">
+                <FaBars className="icon-busqueda" />
+            </button>
+
             <h1 className="header__title">
                 <a href="#">{data.sidebar.name}</a>
             </h1>
             <article className="navbar">
                 <img className="profile" src={profileImg} alt="Profile" />
-                <p className="description">
-                   {data.sidebar.description}
-                </p>
+                <p className="description">{data.sidebar.description}</p>
                 <ul className="redes">
                     <li className="redes__icons">
                         <Link to="/twitter">
