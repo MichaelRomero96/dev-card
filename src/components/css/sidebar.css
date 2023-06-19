@@ -17,11 +17,11 @@ hr {
     opacity: .25;
 }
 
-.body::-webkit-scrollbar{
+.body::-webkit-scrollbar {
     width: 6px;
 }
 
-.body::-webkit-scrollbar-thumb{
+.body::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
@@ -150,7 +150,7 @@ summary:hover {
     letter-spacing: 1px;
 }
 
-.details__info:hover{
+.details__info:hover {
     color: rgba(0, 0, 0, 0.6);
 }
 
@@ -239,4 +239,48 @@ summary:hover {
 
 .switch input:checked+.slider:before {
     transform: translateX(1.5em);
+}
+
+/** Media Queries */
+@media (width < 990px) {
+    .body {
+        width: 100%;
+        height: 90vh;
+        padding: 1rem;
+    }
+
+    .btn-busqueda {
+        all: unset;
+        position: absolute;
+        border: 1px solid rgba(255, 255, 255, .8);
+        padding: 0.3rem 0.6rem;
+        top: 20px;
+        left: 17px;
+
+    }
+
+    .icon-busqueda {
+        display: inline-block;
+        color: #FFF;
+        width: 1.5rem;
+        height: 1.5rem;
+        vertical-align: middle;
+    }
+
+    .anclas {
+        padding: 0;
+    }
+
+    .info-extra {
+        position: static;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .darkmode svg {
+        margin-right: 5px;
+        font-size: 1rem;
+    }
 }
