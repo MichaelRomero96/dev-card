@@ -7,6 +7,10 @@
     list-style: none;
 }
 
+button {
+    all: unset;
+}
+
 a {
     color: #54B689;
 }
@@ -17,24 +21,42 @@ hr {
     opacity: .25;
 }
 
-.body::-webkit-scrollbar{
+/** Herramientas  */
+.hidden {
+    visibility: hidden;
+}
+
+.no-hidden {
+    visibility: visible;
+}
+
+
+.body::-webkit-scrollbar {
     width: 6px;
 }
 
-.body::-webkit-scrollbar-thumb{
+.body::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
 
 .body {
     position: fixed;
+    display: block;
     background-color: #54B689;
     width: 280px;
     height: 100vh;
+    top: 0;
+    left: 0;
     font-weight: 400;
     font-size: 1em;
     text-align: center;
     overflow-y: auto;
+}
+
+.btn-busqueda,
+.content-responsive {
+    display: none;
 }
 
 .header__title {
@@ -150,7 +172,7 @@ summary:hover {
     letter-spacing: 1px;
 }
 
-.details__info:hover{
+.details__info:hover {
     color: rgba(0, 0, 0, 0.6);
 }
 
@@ -165,7 +187,7 @@ summary:hover {
 }
 
 .btn {
-    all: unset;
+    display: inline-block;
     padding: 0rem 1rem;
     height: 2.5rem;
     font-weight: bold;
@@ -179,6 +201,7 @@ summary:hover {
 }
 
 .btn-darkmode {
+    display: inline-block;
     margin-bottom: 1.5rem;
 }
 
@@ -201,6 +224,7 @@ summary:hover {
     display: inline-block;
     width: 70px;
     height: 30px;
+    margin-bottom: 1rem;
 }
 
 /* Hide default HTML checkbox */
@@ -239,4 +263,117 @@ summary:hover {
 
 .switch input:checked+.slider:before {
     transform: translateX(1.5em);
+}
+
+/** btn open/close */
+.hamburger {
+    cursor: pointer;
+}
+
+.hamburger input {
+    display: none;
+}
+
+.hamburger svg {
+    /* The size of the SVG defines the overall size */
+    height: 3em;
+    /* Define the transition for transforming the SVG */
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+    fill: none;
+    stroke: white;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2.2;
+    /* Define the transition for transforming the Stroke */
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+    stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked+svg {
+    transform: rotate(-45deg);
+}
+
+.hamburger input:checked+svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+}
+
+
+/** Media Queries */
+@media (width < 990px) {
+    .content-responsive {
+        display: initial;
+        background-color: #54B689;
+        /* padding: 0.3rem; */
+    }
+
+    .body {
+        position: relative;
+        width: 100%;
+        height: 90%;
+        padding: 1rem;
+    }
+
+    .btn-busqueda {
+        z-index: 100;
+        display: inline-block;
+        position: absolute;
+        padding: 0.3rem 0.6rem;
+        top: 6px;
+        left: 5px;
+
+    }
+
+    .header__title-2 {
+        padding-top: 0;
+        margin: 0;
+        background-color: #54B689;
+        text-align: center;
+        font-size: 1.4rem;
+        padding-top: 24px;
+    }
+
+    .header__title-2 a {
+        color: #FFF;
+        
+    }
+
+    .header__title {
+        display: none;
+    }
+
+    .anclas {
+        padding: 0;
+    }
+
+    .info-extra {
+        position: static;
+    }
+
+    .btn {
+        display: inline-block;
+        width: 90%;
+    }
+
+    .darkmode svg {
+        margin-right: 5px;
+        font-size: 1rem;
+    }
+}
+
+@media (width < 430px) {
+    .hamburger svg {
+        height: 2.5em;
+    }
+
+    .btn-busqueda {
+        top: 15px;
+    }
 }
