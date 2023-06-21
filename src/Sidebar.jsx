@@ -33,11 +33,13 @@ const Aside = () => {
         if (sectionElement) {
             if (isSidebarOpen) {
                 gsap.to(sectionElement, {
-                    maxHeight: window.innerWidth > 900 ? '100vh': '90vh'
+                    maxHeight: window.innerWidth > 900 ? "100vh" : "90vh",
+                    display: "block",
                 });
             } else {
                 gsap.to(sectionElement, {
                     maxHeight: 0,
+                    display: "none",
                 });
             }
         }
@@ -75,7 +77,6 @@ const Aside = () => {
                         Hi, my name is Simon Doe and I'm a senior software
                         engineer. Welcome to my personal website!
                     </p>
-                    {/* Iconos */}
                     <ul className="redes">
                         <li className="redes__icons">
                             <Link to="/twitter">
