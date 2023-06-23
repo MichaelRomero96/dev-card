@@ -4,7 +4,7 @@ import "./components/css/sidebar.css";
 import { gsap } from "gsap";
 import HamburgerButton from "./components/HamburgerIcon";
 import profileImg from "./components/mock/profile.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import {
     FaTwitter,
     FaLinkedinIn,
@@ -23,7 +23,6 @@ import {
     FaCaretDown,
     FaBars,
 } from "react-icons/fa";
-import data from "./data";
 
 const Aside = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState();
@@ -61,9 +60,7 @@ const Aside = () => {
                 <HamburgerButton
                     action={() => setIsSidebarOpen((prev) => !prev)}
                 />
-                <h1 className="header__title-2">
-                    <a href="#">Simon Doe</a>
-                </h1>
+                <h1 className="header__title-2">Simon Doe</h1>
             </div>
             <section ref={sectionRef} className="body">
                 <h1 className="header__title">
@@ -109,42 +106,42 @@ const Aside = () => {
                     <hr />
                 </article>
                 <article>
-                    <ul className="anclas">
+                    <ul className="anclas navbar">
                         <li className="anclas__links">
-                            <Link className="anclas__icons" to="/about-me">
+                            <NavLink className="anclas__icons" to="/about-me">
                                 <FaUser className="anclas__icon" />
                                 About Me
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className="anclas__links">
-                            <Link className="anclas__icons" to="/portfolio">
+                            <NavLink className="anclas__icons" to="/portfolio">
                                 <FaLaptopCode className="anclas__icon" />
                                 Portfolio
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className="anclas__links">
-                            <Link className="anclas__icons" to="/sevices">
+                            <NavLink className="anclas__icons" to="/sevices">
                                 <FaToolbox className="anclas__icon" />
                                 Sevices & Pricing
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className="anclas__links">
-                            <Link className="anclas__icons" to="/resume">
+                            <NavLink className="anclas__icons" to="/resume">
                                 <FaFileAlt className="anclas__icon" />
                                 Resume
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className="anclas__links">
-                            <Link className="anclas__icons" to="/blog">
+                            <NavLink className="anclas__icons" to="/blog">
                                 <FaBlog className="anclas__icon" />
                                 Blog
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className="anclas__links">
-                            <Link className="anclas__icons" to="/contact">
+                            <NavLink className="anclas__icons" to="/contact">
                                 <FaEnvelopeOpenText className="anclas__icon" />
                                 Contact
-                            </Link>
+                            </NavLink>
                         </li>
                         <div>
                             <details className="info-extra">
@@ -153,38 +150,38 @@ const Aside = () => {
                                     Pages
                                     <FaCaretDown className="icon-arrow" />
                                 </summary>
-                                <ul className="details">
+                                <ul className="details navbar">
                                     <li>
-                                        <Link
+                                        <NavLink
                                             className="details__info"
                                             to="/project-page"
                                         >
                                             Project Page
-                                        </Link>
+                                        </NavLink>
                                     </li>
                                     <li>
-                                        <Link
+                                        <NavLink
                                             className="details__info"
                                             to="/blog1"
                                         >
                                             Blog Home 1
-                                        </Link>
+                                        </NavLink>
                                     </li>
                                     <li>
-                                        <Link
+                                        <NavLink
                                             className="details__info"
                                             to="/blog2"
                                         >
                                             Blog Home 2
-                                        </Link>
+                                        </NavLink>
                                     </li>
                                     <li>
-                                        <Link
+                                        <NavLink
                                             className="details__info"
                                             to="/blog-post"
                                         >
                                             Blog Post
-                                        </Link>
+                                        </NavLink>
                                     </li>
                                 </ul>
                             </details>
@@ -195,7 +192,7 @@ const Aside = () => {
                     <div>
                         <button className="btn">
                             <Link to="/hireme">
-                                <FaPaperPlane className="icon-paperplane" />{" "}
+                                <FaPaperPlane className="icon-paperplane" />
                                 Hire Me
                             </Link>
                         </button>

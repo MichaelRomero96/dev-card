@@ -1,0 +1,371 @@
+.container {
+    width: 50%;
+    margin-left: 600px;
+    color: #4F4F4F;
+}
+
+.flex {
+    display: flex;
+    gap: 5rem;
+}
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.wrapper-btn {
+    margin: 2rem;
+    text-align: center;
+    margin-bottom: 8rem;
+}
+
+.header__title-resume {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.btn-header {
+    background-color: #54B686;
+    padding: 6px 10px;
+    height: 2rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn-header:hover {
+    background-color: #43946d;
+    transition: .5s;
+}
+
+.btn-header__cta,
+.btn-header__icon {
+    color: #FFF;
+    font-size: 1rem;
+
+}
+
+.btn-header__icon {
+    margin-right: 5px;
+}
+
+.wrapper-user {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.user__title {
+    font-size: 2.8rem;
+    color: #54B686;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: .2rem;
+}
+
+.user__profession {
+    font-size: 1.3rem;
+    margin-bottom: 5rem;
+    color: #4F4F4F;
+}
+
+.wrapper-contact__links {
+    text-decoration: underline;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.wrapper-contact__links:hover {
+    text-decoration: underline #54B686;
+    color: #54B686;
+}
+
+.wrapper-contact__links:nth-child(4) {
+    margin-bottom: 0;
+}
+
+.wrapper-contact__location,
+.wrapper-contact__links {
+    display: inline-block;
+    color: #4F4F4F;
+    margin-left: 0.5rem;
+}
+
+.wrapper-contact svg {
+    color: #4F4F4F;
+}
+
+.location {
+    font-size: 12px;
+}
+
+.location svg {
+    vertical-align: middle;
+    color: #4F4F4F;
+}
+
+.wrapper-profile {
+    display: flex;
+    margin-bottom: 4rem;
+}
+
+.profile__img {
+    max-width: 120px;
+    height: 100%;
+    margin-right: 3rem;
+}
+
+.profile__description {
+    line-height: 1.5;
+    font-size: 13px;
+    text-align: justify;
+    color: #4F4F4F;
+}
+
+.profile__cta {
+    text-decoration: underline rgba(41, 41, 41, 0.4);
+    color: #4F4F4F;
+}
+
+.profile__cta:hover {
+    text-decoration: underline #54B686;
+    color: #54B686;
+}
+
+.section-content {
+    margin-bottom: 6.8rem;
+}
+
+.hr-resume {
+    border-color: rgba(0, 0, 0, 0.2);
+    margin: 1rem 0;
+}
+
+.projects {
+    margin-bottom: 8rem;
+}
+
+.list {
+    margin-bottom: 1rem;
+}
+
+.main__title,
+.main__titles {
+    color: #54B686;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-size: 12px;
+}
+
+.main__titles {
+    font-size: 1.3rem;
+}
+
+.main__titles span {
+    border-left: 5px solid #54B686;
+    margin-right: .8rem;
+}
+
+.list__text {
+    list-style: outside;
+    margin-left: 2rem;
+    margin-bottom: .5rem;
+    font-size: 12px;
+}
+
+
+.wrapper-texts {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(41, 41, 41, 0.7);
+}
+
+.wrapper-texts h4 {
+    color: #000;
+}
+
+.texts__title {
+    margin-bottom: 1rem;
+}
+
+.texts__company {
+    font-size: 12px;
+}
+
+.texts__role {
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    font-size: 12px;
+}
+
+.list-elements {
+    margin-bottom: 1rem;
+    font-size: 12px;
+}
+
+.education {
+    margin-bottom: 1.5rem;
+}
+
+.education:nth-child(3) {
+    margin-bottom: 2rem;
+}
+
+.title__education {
+    margin-bottom: 0.5rem;
+}
+
+.text__education,
+.text__awards {
+    color: rgba(41, 41, 41, 0.6);
+    font-size: 12px;
+}
+
+.text__awards {
+    margin-bottom: 1rem;
+}
+
+.text__lang {
+    margin-bottom: 2rem;
+}
+
+.redes-resume {
+    display: flex;
+    justify-content: center;
+}
+
+.red-resume {
+    display: block;
+}
+
+.red-resume p {
+    display: inline-block;
+}
+
+.red-resume:hover {
+    color: #54B686;
+}
+
+.redes-resume svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.7rem;
+    color: #FFF;
+    border-radius: 2px;
+    background-color: rgba(41, 41, 41, 0.8);
+    padding: 3px;
+    vertical-align: middle;
+}
+
+.redes-resume svg:hover {
+    background-color: #54B686;
+}
+
+.redes-resume a {
+    color: rgba(41, 41, 41, 0.6);
+    font-size: 12px;
+    margin-right: 1rem;
+}
+
+.redes-resume a:nth-child(3) {
+    margin-right: 0;
+}
+
+.footer {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.derechos {
+    text-align: center;
+    /* line-height: 12; */
+    font-size: 13px;
+}
+
+.derechos a:hover {
+    text-decoration: underline;
+    color: #43946d;
+}
+
+/** Media Queries */
+
+@media (width < 990px) {
+    .container {
+        width: 95%;
+        margin: 0 20px 48px;
+        padding: 48px;
+    }
+
+    .flex {
+        display: unset;
+    }
+
+    .user__title {
+        width: 50%;
+    }
+
+    .wrapper-profile {
+        align-items: center;
+    }
+
+    .projects {
+        margin-bottom: 3rem;
+    }
+
+    article {
+        margin-bottom: 2.5rem;
+    }
+
+    .aside {
+        width: 100%;
+    }
+
+    .redes-resume p {
+        display: none;
+    }
+
+    .footer {
+        height: 0;
+        margin-top: 5rem;
+    }
+
+    .derechos {
+        line-height: 0;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem
+    }
+
+}
+
+@media (width < 430px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrapper-user {
+        flex-direction: column;
+    }
+
+    .wrapper-profile {
+        margin-top: 2rem;
+        flex-direction: column;
+    }
+
+    .wrapper-btn {
+        margin: 0;
+        margin-bottom: 8rem;
+    }
+
+    .user__profession {
+        margin-bottom: 1rem;
+    }
+
+    .profile__img {
+        margin-bottom: 2rem;
+    }
+}

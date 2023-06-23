@@ -30,7 +30,6 @@ hr {
     visibility: visible;
 }
 
-
 .body::-webkit-scrollbar {
     width: 6px;
 }
@@ -62,7 +61,7 @@ hr {
 .header__title {
     padding-top: 24px;
     margin: 0;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 
@@ -71,7 +70,6 @@ hr {
 }
 
 .btn-busqueda {
-    /* visibility: hidden; */
     display: none;
 }
 
@@ -124,6 +122,7 @@ hr {
 }
 
 .anclas svg {
+    margin-right: 0.5rem;
     vertical-align: -0.125em;
 }
 
@@ -131,9 +130,19 @@ hr {
     color: #FFF;
 }
 
+.navbar .active {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 700;
+}
+
 .anclas__icons:hover {
     color: rgba(0, 0, 0, 0.6);
+    font-weight: 700;
 }
+
+/* Activa los iconos */
+.navbar svg .active
+/* Activa los iconos */
 
 .anclas__icon {
     color: #FFF;
@@ -200,6 +209,11 @@ summary:hover {
     background-color: #1a2a2059;
 }
 
+.btn:hover {
+    background-color: #111a1465;
+    transition: .3s;
+}
+
 .btn a {
     color: #FFF;
     font-size: 15px;
@@ -218,6 +232,7 @@ summary:hover {
 }
 
 .icon-darkmode {
+    margin-right: 0.5rem;
     vertical-align: -0.125em;
 }
 
@@ -341,7 +356,7 @@ summary:hover {
         font-size: 1.4rem;
     }
 
-    .header__title-2 a {
+    .header__title-2 {
         color: #FFF;
     }
 
