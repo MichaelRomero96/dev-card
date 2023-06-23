@@ -23,11 +23,13 @@ import {
     FaCaretDown,
     FaBars,
 } from "react-icons/fa";
-import data from "./data";
+import db from "./db";
 
 const Aside = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState();
     const sectionRef = useRef();
+    const { anotherSectionTest } = db;
+    console.log(anotherSectionTest);
 
     useEffect(() => {
         if (isSidebarOpen === undefined) return;
