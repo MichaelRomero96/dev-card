@@ -27,8 +27,6 @@ import {
 const Aside = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState();
     const sectionRef = useRef();
-    const { anotherSectionTest } = db;
-    console.log(anotherSectionTest);
 
     useEffect(() => {
         if (isSidebarOpen === undefined) return;
