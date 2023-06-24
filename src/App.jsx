@@ -1,12 +1,17 @@
-import React from 'react';
-import Layout from './Layout';
+import Layout from './components/Layout';
 import { Route, Routes } from 'react-router-dom';
+import Resume from './pages/Resume';
+import AboutMe from './pages/AboutMe';
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Layout />} />
-    </Routes>
+    <>
+      <Layout />
+      <Routes>
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/resume" element={<AboutMe />} />
+      </Routes>
+    </>
   );
 };
 

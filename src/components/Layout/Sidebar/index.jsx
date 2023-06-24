@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
-import './components/css/normalize.css';
-import './components/css/sidebar.css';
+import '../../css/normalize.css';
+import '../../css/sidebar.css';
 import { gsap } from 'gsap';
-import HamburgerButton from './components/HamburgerIcon';
-import profileImg from './components/mock/profile.png';
+import HamburgerButton from '../../../components/HamburgerIcon';
+import profileImg from '../../../components/mock/profile.png';
 import { Link, NavLink } from 'react-router-dom';
 import {
   FaTwitter,
@@ -23,8 +23,9 @@ import {
   FaCaretDown,
   FaBars,
 } from 'react-icons/fa';
+import Styled from './Styled';
 
-const Aside = () => {
+const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState();
   const sectionRef = useRef();
 
@@ -56,10 +57,10 @@ const Aside = () => {
 
   return (
     <div>
-      <div className="content-responsive">
+      <Styled.HeaderWrapper>
         <HamburgerButton action={() => setIsSidebarOpen((prev) => !prev)} />
         <h1 className="header__title-2">Simon Doe</h1>
-      </div>
+      </Styled.HeaderWrapper>
       <section ref={sectionRef} className="body">
         <h1 className="header__title">
           <a href="#">Simon Doe</a>
@@ -195,4 +196,4 @@ const Aside = () => {
   );
 };
 
-export default Aside;
+export default Sidebar;
