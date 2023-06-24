@@ -1,6 +1,6 @@
 import home from './home';
 import resume from './resume';
 
-const db = { home, resume }
+const db = { home, resume };
 
-export default db
+export default db;

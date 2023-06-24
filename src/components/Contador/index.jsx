@@ -1,5 +1,4 @@
-
-import React, { useState } from "react"
+import React, { useState } from 'react';
 
 // Ciclo de vida en un Componente
 
@@ -11,7 +10,7 @@ import React, { useState } from "react"
 
 // component will update => el componente ha recibido cambio en el estado y debe hacer re-render
 
-// state => Debemos controlar el estado  
+// state => Debemos controlar el estado
 // REACT V 17< -- HOOKS
 //HOOKS -> ganchos funciones que actualizan el estado en react
 
@@ -33,16 +32,20 @@ const imprimirSuma = (fn, a, b) => {
 imprimirSuma(sumar(10, 20)) */
 
 const Contador = () => {
-   const [valor, setValor] = useState(0)
-   const incrementar = () => setValor(prev => prev + 1 )
-   const decrementar = () => setValor(prev => prev - 1 )
+  const [valor, setValor] = useState(0);
+  const incrementar = () => setValor((prev) => prev + 1);
+  const decrementar = () => setValor((prev) => prev - 1);
   return (
     <>
-        <button onClick={incrementar} className="no-hidden">Incrementar</button>
-        <button onClick={decrementar} className="no-hidden">Decrementar</button>
-        <div id='counter-elem'>{valor}</div>
+      <button onClick={incrementar} className="no-hidden">
+        Incrementar
+      </button>
+      <button onClick={decrementar} className="no-hidden">
+        Decrementar
+      </button>
+      <div id="counter-elem">{valor}</div>
     </>
-  )
-}
+  );
+};
 
-export default Contador
+export default Contador;
