@@ -1,6 +1,6 @@
 import home from './home';
-import anotherSectionTest from './anotherSectionTest';
+import resume from './resume';
 
-const db = { home, anotherSectionTest }
+const db = { home, resume }
 
 export default db
