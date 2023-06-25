@@ -11,350 +11,431 @@ import {
 } from 'react-icons/fa';
 import resumeImg from './../mock/resume-profile.png';
 import db from '../../db';
-import '../css/resume.css';
+import Styled from './Styled';
+import RedesIconWrapper from './RedesIconWrapper';
 
 const Resume = () => {
   const { resume, home } = db;
   return (
-    <>
-      <div className="container">
-        <section className="header">
-          <div className="wrapper-btn">
-            <h2 className="header__title-resume">Online Resume</h2>
+    <Styled.Container>
+      <section>
+        <Styled.WrapperHeader>
+          <Styled.HeaderTitle>Online Resume</Styled.HeaderTitle>
 
-            <button className="btn-header">
-              <FaFilePdf className="btn-header__icon" />
-              <Link
-                to="https://themes.3rdwavemedia.com/resources/sketch-template/devresume-sketch-sketch-resume-template-for-software-developers/"
-                className="btn-header__cta"
-              >
-                Download PDF Version
-              </Link>
-            </button>
+          <Styled.Button>
+            <RedesIconWrapper hideBg>
+              <FaFilePdf />
+            </RedesIconWrapper>
+            <Link
+              style={{ color: '#fff', fontSize: '1rem' }}
+              to="https://themes.3rdwavemedia.com/resources/sketch-template/devresume-sketch-sketch-resume-template-for-software-developers/"
+              className="btn-header__cta"
+            >
+              Download PDF Version
+            </Link>
+          </Styled.Button>
+        </Styled.WrapperHeader>
+
+        <Styled.WrapperUser className="wrapper-user">
+          <div>
+            <Styled.UserTitle>{home.user.name}</Styled.UserTitle>
+            <Styled.UserProfession>
+              {home.user.profession}
+            </Styled.UserProfession>
           </div>
 
-          <div className="wrapper-user">
-            <div>
-              <h2 className="user__title">{home.user.name}</h2>
-              <p className="user__profession">{home.user.profession}</p>
-            </div>
-
-            <ul className="wrapper-contact">
-              <li>
-                <FaPhoneSquare />
-                <a className="wrapper-contact__links" href="#">
-                  {resume.contact.number}
-                </a>
-              </li>
-              <li>
-                <FaEnvelopeSquare />
-                <a className="wrapper-contact__links" href="#">
-                  {resume.contact.email}
-                </a>
-              </li>
-              <li>
-                <FaGlobe />
-                <a className="wrapper-contact__links" href="#">
-                  {resume.contact.web}
-                </a>
-              </li>
-              <li className="location">
-                <FaMapMarkedAlt />
-                <p className="wrapper-contact__location">
-                  {resume.contact.location}
-                </p>
-              </li>
-            </ul>
-          </div>
-
-          <div className="wrapper-profile">
-            <img
-              src={resumeImg}
-              alt="Imagen Resumen"
-              className="profile__img"
-            />
-
-            <p className="profile__description">
-              Summarise your career here.
-              <a href="#" className="profile__cta">
-                You can make a PDF version of your resume using our free Sketch
-                template here
-              </a>
-              . Donec quam felis, ultricies nec, pellentesque eu. Lorem ipsum
-              dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-              ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et
-              magnis dis parturient montes, nascetur ridiculus mus. Donec quam
-              felis, ultricies nec, pellentesque eu, pretium quis, sem. Maecenas
-              nec odio et ante tincidunt tempus. Donec vitae sapien ut libero
-              venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget
-              eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet
-              nibh.
-            </p>
-          </div>
-        </section>
-
-        <section className="section-content">
-          <div className="flex">
-            <div>
-              <article className="main">
-                <h3 className="main__titles">
-                  <span></span>Work Experiences
-                </h3>
-
-                <div className="main__texts">
-                  <div className="wrapper-texts">
-                    <h4 className="texts__title">{home.user.profession}</h4>
-                    <p className="texts__company">
-                      {resume.workExperiences.companyAndDate}
-                    </p>
-                  </div>
-                  <p className="texts__name">{resume.workExperiences.name}</p>
-                  <p className="texts__role">{resume.workExperiences.role}</p>
-
-                  <ul className="list">
-                    <li className="list__text">
-                      Lorem ipsum dolor sit amet, consectetuer.
-                    </li>
-                    <li className="list__text">
-                      Aenean commodo ligula eget dolor.
-                    </li>
-                    <li className="list__text">
-                      Etiam ultricies nisi vel augue.
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <div className="wrapper-texts">
-                    <h4 className="texts__title">
-                      {resume.workExperiences2.name}
-                    </h4>
-                    <p className="texts__company">
-                      {resume.workExperiences2.companyAndDate}
-                    </p>
-                  </div>
-                  <p className="texts__name">{resume.workExperiences2.name}</p>
-                  <p className="texts__role">{resume.workExperiences2.role}</p>
-
-                  <ul className="list">
-                    <li className="list__text">
-                      Lorem ipsum dolor sit amet, consectetuer.
-                    </li>
-                    <li className="list__text">
-                      Aenean commodo ligula eget dolor.
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <div className="wrapper-texts">
-                    <h4 className="texts__title">
-                      {resume.workExperiences3.name}
-                    </h4>
-                    <p className="texts__company">
-                      {resume.workExperiences3.companyAndDate}
-                    </p>
-                  </div>
-                  <p className="texts__name">{resume.workExperiences3.name}</p>
-                  <p className="texts__role">{resume.workExperiences3.role}</p>
-                </div>
-
-                <div>
-                  <div className="wrapper-texts">
-                    <h4 className="texts__title">
-                      {resume.workExperiences4.name}
-                    </h4>
-                    <p className="texts__company">
-                      {resume.workExperiences4.companyAndDate}
-                    </p>
-                  </div>
-                  <p className="texts__name">{resume.workExperiences4.name}</p>
-                  <p className="texts__role">{resume.workExperiences4.role}</p>
-                </div>
-
-                <div>
-                  <div className="wrapper-texts">
-                    <h4 className="texts__title">
-                      {resume.workExperiences5.name}
-                    </h4>
-                    <p className="texts__company">
-                      {resume.workExperiences5.companyAndDate}
-                    </p>
-                  </div>
-                  <p className="texts__name">{resume.workExperiences5.name}</p>
-                  <p className="texts__role">{resume.workExperiences5.role}</p>
-                </div>
-
-                <div>
-                  <div className="wrapper-texts">
-                    <h4 className="texts__title">
-                      {resume.workExperiences6.name}
-                    </h4>
-                    <p className="texts__company">
-                      {resume.workExperiences6.companyAndDate}
-                    </p>
-                  </div>
-                  <p className="texts__name">{resume.workExperiences6.name}</p>
-                  <p className="texts__role">{resume.workExperiences6.role}</p>
-                </div>
-              </article>
-              <article className="projects">
-                <h3 className="main__titles">
-                  <span></span>Projects
-                </h3>
-
-                <div>
-                  <div className="wrapper-texts">
-                    <h4 className="texts__title">{resume.projects.name}</h4>
-                    <p className="texts__company">{resume.projects.status}</p>
-                  </div>
-                  <p className="texts__role">{resume.projects.desription}</p>
-                </div>
-
-                <div>
-                  <div className="wrapper-texts">
-                    <h4 className="texts__title">{resume.projects2.name}</h4>
-                    <p className="texts__company">{resume.projects2.status}</p>
-                  </div>
-                  <p className="texts__role">{resume.projects2.desription}</p>
-                </div>
-
-                <div>
-                  <div className="wrapper-texts">
-                    <h4 className="texts__title">{resume.projects3.name}</h4>
-                    <p className="texts__company">{resume.projects3.status}</p>
-                  </div>
-                  <p className="texts__role">{resume.projects3.desription}</p>
-                </div>
-              </article>
-            </div>
-
-            <aside className="aside">
-              <article className="article one">
-                <h3 className="main__titles">
-                  <span></span>Skills
-                </h3>
-
-                <div>
-                  <h4 className="texts__title">Technical</h4>
-                  <ul>
-                    <li className="list-elements">
-                      JavaScript/Angular/React/Vue
-                    </li>
-                    <li className="list-elements">Python/ Ruby / PHP</li>
-                    <li className="list-elements">Node.js / ASP.NET</li>
-                    <li className="list-elements">PostgreSQL / MySQL</li>
-                    <li className="list-elements">Object - oriented design</li>
-                    <li className="list-elements">
-                      Design and implement database structures
-                    </li>
-                    <li className="list-elements">
-                      Lead and deliver complex software systems
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className="texts__title">
-                    <span></span>Professional
-                  </h4>
-                  <ul>
-                    <li className="list-elements">Effective communication</li>
-                    <li className="list-elements">Team player</li>
-                    <li className="list-elements">Strong problem solver</li>
-                    <li className="list-elements">Good time management</li>
-                  </ul>
-                </div>
-              </article>
-              <article className="article two">
-                <h3 className="main__titles">
-                  <span></span>Education
-                </h3>
-
-                <div className="education">
-                  <p className="title__education">{resume.education.carrer}</p>
-                  <p className="text__education">{resume.education.school}</p>
-                  <p className="text__education">{resume.education.date}</p>
-                </div>
-
-                <div className="education">
-                  <p className="title__education">{resume.education2.carrer}</p>
-                  <p className="text__education">{resume.education2.school}</p>
-                  <p className="text__education">{resume.education2.date}</p>
-                </div>
-              </article>
-              <article className="article three">
-                <h3 className="main__titles">
-                  <span></span>Awards
-                </h3>
-
-                <div>
-                  <p>{resume.awards.name}</p>
-                  <p className="text__awards">{resume.awards.awardAndDate}</p>
-                </div>
-
-                <div>
-                  <p>{resume.awards2.name}</p>
-                  <p className="text__awards">{resume.awards2.awardAndDate}</p>
-                </div>
-              </article>
-              <article className="article four">
-                <h3 className="main__titles">
-                  <span></span>Languajes
-                </h3>
-
-                <ul>
-                  <li className="list-elements">English (Native)</li>
-                  <li className="list-elements text__lang">
-                    Spanish (Professional)
-                  </li>
-                </ul>
-              </article>
-              <article className="article five">
-                <h3 className="main__titles">
-                  <span></span>Interests
-                </h3>
-
-                <ul>
-                  <li className="list-elements">Climbing</li>
-                  <li className="list-elements">Snowboarding</li>
-                  <li className="list-elements">Photography</li>
-                  <li className="list-elements text__lang">Travelling</li>
-                </ul>
-              </article>
-            </aside>
-          </div>
-
-          <hr className="hr-resume" />
-
-          <ul className="redes-resume">
+          <ul>
             <li>
-              <a href="#" className="red-resume">
-                <FaGithub />
-                <p>gitgub.com/username</p>
-              </a>
+              <FaPhoneSquare />
+              <Styled.ContactLinks href="#">
+                {resume.contact.number}
+              </Styled.ContactLinks>
             </li>
             <li>
-              <a href="#" className="red-resume">
-                <FaLinkedinIn />
-                <p>linkedin.com/in/username</p>
-              </a>
+              <FaEnvelopeSquare />
+              <Styled.ContactLinks href="#">
+                {resume.contact.email}
+              </Styled.ContactLinks>
             </li>
             <li>
-              <a href="#" className="red-resume">
-                <FaTwitter />
-                <p>x@twittername</p>
-              </a>
+              <FaGlobe />
+              <Styled.ContactLinks href="#">
+                {resume.contact.web}
+              </Styled.ContactLinks>
+            </li>
+            <li style={{ fontSize: '12px' }}>
+              <FaMapMarkedAlt
+                style={{ verticalAlign: 'middle', color: '#4f4f4f' }}
+              />
+              <Styled.ContactLocation>
+                {resume.contact.location}
+              </Styled.ContactLocation>
             </li>
           </ul>
-        </section>
-        <footer className="footer">
-          <p className="derechos">
-            Template Copyright © <a href="#">3rd Wave Media</a>
-          </p>
-        </footer>
-      </div>
-    </>
+        </Styled.WrapperUser>
+
+        <Styled.WrapperProfile>
+          <Styled.ProfileImg src={resumeImg} alt="Imagen Resumen" />
+
+          <Styled.ProfileDescription>
+            Summarise your career here.
+            <Styled.DescriptionLink href="#">
+              You can make a PDF version of your resume using our free Sketch
+              template here
+            </Styled.DescriptionLink>
+            . Donec quam felis, ultricies nec, pellentesque eu. Lorem ipsum
+            dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+            eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+            parturient montes, nascetur ridiculus mus. Donec quam felis,
+            ultricies nec, pellentesque eu, pretium quis, sem. Maecenas nec odio
+            et ante tincidunt tempus. Donec vitae sapien ut libero venenatis
+            faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus
+            tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.
+          </Styled.ProfileDescription>
+        </Styled.WrapperProfile>
+      </section>
+
+      <Styled.SectionArticle>
+        <Styled.Flex>
+          <div>
+            <Styled.Article className="main">
+              <Styled.MainTitles>
+                <Styled.SpanMainTitles></Styled.SpanMainTitles>Work Experiences
+              </Styled.MainTitles>
+
+              <div>
+                <Styled.WrapperTexts>
+                  <Styled.TextSubtitle>
+                    {home.user.profession}
+                  </Styled.TextSubtitle>
+                  <Styled.TextCompany>
+                    {resume.workExperiences.companyAndDate}
+                  </Styled.TextCompany>
+                </Styled.WrapperTexts>
+                <p>{resume.workExperiences.name}</p>
+                <Styled.TextRole>{resume.workExperiences.role}</Styled.TextRole>
+
+                <Styled.List>
+                  <Styled.ListText>
+                    Lorem ipsum dolor sit amet, consectetuer.
+                  </Styled.ListText>
+                  <Styled.ListText>
+                    Aenean commodo ligula eget dolor.
+                  </Styled.ListText>
+                  <Styled.ListText>
+                    Etiam ultricies nisi vel augue.
+                  </Styled.ListText>
+                </Styled.List>
+              </div>
+
+              <div>
+                <Styled.WrapperTexts>
+                  <Styled.TextSubtitle>
+                    {resume.workExperiences2.name}
+                  </Styled.TextSubtitle>
+                  <Styled.TextCompany>
+                    {resume.workExperiences2.companyAndDate}
+                  </Styled.TextCompany>
+                </Styled.WrapperTexts>
+                <p>{resume.workExperiences2.name}</p>
+                <Styled.TextRole>
+                  {resume.workExperiences2.role}
+                </Styled.TextRole>
+
+                <Styled.List>
+                  <Styled.ListText>
+                    Lorem ipsum dolor sit amet, consectetuer.
+                  </Styled.ListText>
+                  <Styled.ListText>
+                    Aenean commodo ligula eget dolor.
+                  </Styled.ListText>
+                </Styled.List>
+              </div>
+
+              <div>
+                <Styled.WrapperTexts>
+                  <Styled.TextSubtitle>
+                    {resume.workExperiences3.name}
+                  </Styled.TextSubtitle>
+                  <Styled.TextCompany>
+                    {resume.workExperiences3.companyAndDate}
+                  </Styled.TextCompany>
+                </Styled.WrapperTexts>
+                <p>{resume.workExperiences3.name}</p>
+                <Styled.TextRole>
+                  {resume.workExperiences3.role}
+                </Styled.TextRole>
+              </div>
+
+              <div>
+                <Styled.WrapperTexts>
+                  <Styled.TextSubtitle>
+                    {resume.workExperiences4.name}
+                  </Styled.TextSubtitle>
+                  <Styled.TextCompany>
+                    {resume.workExperiences4.companyAndDate}
+                  </Styled.TextCompany>
+                </Styled.WrapperTexts>
+                <p>{resume.workExperiences4.name}</p>
+                <Styled.TextRole>
+                  {resume.workExperiences4.role}
+                </Styled.TextRole>
+              </div>
+
+              <div>
+                <Styled.WrapperTexts>
+                  <Styled.TextSubtitle>
+                    {resume.workExperiences5.name}
+                  </Styled.TextSubtitle>
+                  <Styled.TextCompany>
+                    {resume.workExperiences5.companyAndDate}
+                  </Styled.TextCompany>
+                </Styled.WrapperTexts>
+                <p>{resume.workExperiences5.name}</p>
+                <Styled.TextRole>
+                  {resume.workExperiences5.role}
+                </Styled.TextRole>
+              </div>
+
+              <div>
+                <Styled.WrapperTexts>
+                  <Styled.TextSubtitle>
+                    {resume.workExperiences6.name}
+                  </Styled.TextSubtitle>
+                  <Styled.TextCompany>
+                    {resume.workExperiences6.companyAndDate}
+                  </Styled.TextCompany>
+                </Styled.WrapperTexts>
+                <p>{resume.workExperiences6.name}</p>
+                <Styled.TextRole>
+                  {resume.workExperiences6.role}
+                </Styled.TextRole>
+              </div>
+            </Styled.Article>
+            <Styled.SectionProject>
+              <Styled.MainTitles>
+                <Styled.SpanMainTitles></Styled.SpanMainTitles>Projects
+              </Styled.MainTitles>
+
+              <div>
+                <Styled.WrapperTexts>
+                  <Styled.TextSubtitle>
+                    {resume.projects.name}
+                  </Styled.TextSubtitle>
+                  <Styled.TextCompany>
+                    {resume.projects.status}
+                  </Styled.TextCompany>
+                </Styled.WrapperTexts>
+                <Styled.TextRole>{resume.projects.desription}</Styled.TextRole>
+              </div>
+
+              <div>
+                <Styled.WrapperTexts>
+                  <Styled.TextSubtitle>
+                    {resume.projects2.name}
+                  </Styled.TextSubtitle>
+                  <Styled.TextCompany>
+                    {resume.projects2.status}
+                  </Styled.TextCompany>
+                </Styled.WrapperTexts>
+                <Styled.TextRole>{resume.projects2.desription}</Styled.TextRole>
+              </div>
+
+              <div>
+                <Styled.WrapperTexts>
+                  <Styled.TextSubtitle>
+                    {resume.projects3.name}
+                  </Styled.TextSubtitle>
+                  <Styled.TextCompany>
+                    {resume.projects3.status}
+                  </Styled.TextCompany>
+                </Styled.WrapperTexts>
+                <Styled.TextRole>{resume.projects3.desription}</Styled.TextRole>
+              </div>
+            </Styled.SectionProject>
+          </div>
+
+          <Styled.Aside>
+            <Styled.Article>
+              <Styled.MainTitles>
+                <Styled.SpanMainTitles></Styled.SpanMainTitles>Skills
+              </Styled.MainTitles>
+
+              <div>
+                <Styled.TextSubtitle>Technical</Styled.TextSubtitle>
+                <ul>
+                  <Styled.ListElementsAside>
+                    JavaScript/Angular/React/Vue
+                  </Styled.ListElementsAside>
+                  <Styled.ListElementsAside>
+                    Python/ Ruby / PHP
+                  </Styled.ListElementsAside>
+                  <Styled.ListElementsAside>
+                    Node.js / ASP.NET
+                  </Styled.ListElementsAside>
+                  <Styled.ListElementsAside>
+                    PostgreSQL / MySQL
+                  </Styled.ListElementsAside>
+                  <Styled.ListElementsAside>
+                    Object - oriented design
+                  </Styled.ListElementsAside>
+                  <Styled.ListElementsAside>
+                    Design and implement database structures
+                  </Styled.ListElementsAside>
+                  <Styled.ListElementsAside>
+                    Lead and deliver complex software systems
+                  </Styled.ListElementsAside>
+                </ul>
+              </div>
+
+              <div>
+                <Styled.TextSubtitle>Professional</Styled.TextSubtitle>
+                <ul>
+                  <Styled.ListElementsAside>
+                    Effective communication
+                  </Styled.ListElementsAside>
+                  <Styled.ListElementsAside>
+                    Team player
+                  </Styled.ListElementsAside>
+                  <Styled.ListElementsAside>
+                    Strong problem solver
+                  </Styled.ListElementsAside>
+                  <Styled.ListElementsAside>
+                    Good time management
+                  </Styled.ListElementsAside>
+                </ul>
+              </div>
+            </Styled.Article>
+            <Styled.Article>
+              <Styled.MainTitles>
+                <Styled.SpanMainTitles></Styled.SpanMainTitles>Education
+              </Styled.MainTitles>
+
+              <div style={{ marginBottom: '1.5rem' }}>
+                <p style={{ marginBottom: '0.5rem' }}>
+                  {resume.education.carrer}
+                </p>
+                <Styled.TextEducation>
+                  {resume.education.school}
+                </Styled.TextEducation>
+                <Styled.TextEducation>
+                  {resume.education.date}
+                </Styled.TextEducation>
+              </div>
+
+              <div style={{ marginBottom: '1.5rem' }}>
+                <p style={{ marginBottom: '0.5rem' }}>
+                  {resume.education2.carrer}
+                </p>
+                <Styled.TextEducation>
+                  {resume.education2.school}
+                </Styled.TextEducation>
+                <Styled.TextEducation>
+                  {resume.education2.date}
+                </Styled.TextEducation>
+              </div>
+            </Styled.Article>
+            <Styled.Article>
+              <Styled.MainTitles>
+                <Styled.SpanMainTitles></Styled.SpanMainTitles>Awards
+              </Styled.MainTitles>
+
+              <div>
+                <p>{resume.awards.name}</p>
+                <Styled.TextAwards>
+                  {resume.awards.awardAndDate}
+                </Styled.TextAwards>
+              </div>
+
+              <div>
+                <p>{resume.awards2.name}</p>
+                <Styled.TextAwards>
+                  {resume.awards2.awardAndDate}
+                </Styled.TextAwards>
+              </div>
+            </Styled.Article>
+            <Styled.Article>
+              <Styled.MainTitles>
+                <Styled.SpanMainTitles></Styled.SpanMainTitles>Languajes
+              </Styled.MainTitles>
+
+              <ul>
+                <Styled.ListElementsAside>
+                  English (Native)
+                </Styled.ListElementsAside>
+                <Styled.ListElementsAside style={{ marginBottom: '2rem' }}>
+                  Spanish (Professional)
+                </Styled.ListElementsAside>
+              </ul>
+            </Styled.Article>
+            <Styled.Article>
+              <Styled.MainTitles>
+                <Styled.SpanMainTitles></Styled.SpanMainTitles>Interests
+              </Styled.MainTitles>
+
+              <ul>
+                <Styled.ListElementsAside>Climbing</Styled.ListElementsAside>
+                <Styled.ListElementsAside>
+                  Snowboarding
+                </Styled.ListElementsAside>
+                <Styled.ListElementsAside>Photography</Styled.ListElementsAside>
+                <Styled.ListElementsAside style={{ marginBottom: '2rem' }}>
+                  Travelling
+                </Styled.ListElementsAside>
+              </ul>
+            </Styled.Article>
+          </Styled.Aside>
+        </Styled.Flex>
+
+        <Styled.HrResume />
+
+        <Styled.Redes>
+          <li>
+            <RedesIconWrapper>
+              <a href="#">
+                <RedesIconWrapper>
+                  <FaGithub />
+                </RedesIconWrapper>
+                <Styled.RedesText>gitgub.com/username</Styled.RedesText>
+              </a>
+            </RedesIconWrapper>
+          </li>
+          <li>
+            <RedesIconWrapper>
+              <a href="#">
+                <RedesIconWrapper>
+                  <FaLinkedinIn />
+                </RedesIconWrapper>
+                <Styled.RedesText>linkedin.com/in/username</Styled.RedesText>
+              </a>
+            </RedesIconWrapper>
+          </li>
+          <li>
+            <RedesIconWrapper>
+              <a href="#">
+                <RedesIconWrapper>
+                  <FaTwitter />
+                </RedesIconWrapper>
+                <Styled.RedesText>x@twittername</Styled.RedesText>
+              </a>
+            </RedesIconWrapper>
+          </li>
+        </Styled.Redes>
+      </Styled.SectionArticle>
+      <Styled.Footer>
+        <Styled.TextFooter>
+          Template Copyright © {''}
+          <a
+            style={{
+              '&:hover': { textDecoration: 'underline', color: '#43946d' },
+            }}
+            href="#"
+          >
+            3rd Wave Media
+          </a>
+        </Styled.TextFooter>
+      </Styled.Footer>
+    </Styled.Container>
   );
 };
 

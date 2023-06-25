@@ -1,0 +1,30 @@
+.wrapper-footer svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.7rem;
+    color: #fff;
+    border-radius: 2px;
+    background-color: rgba(41, 41, 41, 0.8);
+    padding: 3px;
+    vertical-align: middle;
+}
+
+@media (width < 990px) {
+    .wrapper-footer p {
+        display: none;
+    }
+}
+
+.wrapper-btn-header svg {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-right: 5px;
+}
+
+.svg p:hover {
+    color: #54b686;
+}
+
+.svg-bg svg:hover {
+    background-color: #54b686;
+}

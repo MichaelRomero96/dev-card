@@ -12,4 +12,6 @@ const HeaderWrapper = Styled.div`
   }
 `;
 
+//TODO: Empezar con sidebar y sidebar responsive en style components
+
 export default { HeaderWrapper };
