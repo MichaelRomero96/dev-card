@@ -153,46 +153,46 @@ const TextSubtitle = styled.h4`
 
 const ProfileDescription = styled.p`
   line-height: 1.5;
-  font-size: ${fontSize.xsmall};
+  font-size: ${fontSize.sm};
   text-align: justify;
   color: ${colors.fonts.text.normal};
 `;
 
 const TextCompany = styled.p`
-  font-size: ${fontSize.small};
+  font-size: ${fontSize.xs};
 `;
 
 const TextAwards = styled.p`
   color: ${colors.fonts.text.light};
-  font-size: ${fontSize.small};
+  font-size: ${fontSize.xs};
   margin-bottom: 1rem;
 `;
 
 const TextRole = styled.p`
   line-height: 1.5;
   margin-bottom: 1rem;
-  font-size: ${fontSize.small};
+  font-size: ${fontSize.xs};
 `;
 
 const TextEducation = styled.p`
   color: ${colors.fonts.text.light};
-  font-size: ${fontSize.small};
+  font-size: ${fontSize.xs};
 `;
 
 const RedesText = styled.p`
   display: inline-block;
   color: ${colors.fonts.text.light};
-  font-size: ${fontSize.small};
+  font-size: ${fontSize.xs};
 `;
 
 const TextFooter = styled.p`
   text-align: center;
-  font-size: ${fontSize.xsmall};
+  font-size: ${fontSize.sm};
 
   @media (${breakpoints.mmdDown}) {
     line-height: 0;
-    padding-top: ${size.small};
-    padding-bottom: ${size.small};
+    padding-top: ${size.xs};
+    padding-bottom: ${size.xs};
   }
 `;
 
@@ -200,7 +200,7 @@ const ListText = styled.li`
   list-style: outside;
   margin-left: 2rem;
   margin-bottom: 0.5rem;
-  font-size: ${fontSize.small};
+  font-size: ${fontSize.xs};
 `;
 const ContactLocation = styled.p`
   display: inline-block;
@@ -222,7 +222,7 @@ const Aside = styled.aside`
 
 const ListElementsAside = styled.li`
   margin-bottom: 1rem;
-  font-size: ${fontSize.small};
+  font-size: ${fontSize.xs};
 `;
 
 const Article = styled.article`
@@ -269,7 +269,7 @@ const Button = styled.button`
 `;
 const ContactLinks = styled.a`
   text-decoration: underline;
-  font-size: ${fontSize.small};
+  font-size: ${fontSize.xs};
   margin-bottom: ${size.px.sm};
   display: inline-block;
   color: ${colors.fonts.text.normal};

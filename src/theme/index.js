@@ -17,8 +17,8 @@ const colors = {
 };
 
 const fontSize = {
-  small: '12px',
-  xsmall: '13px',
+  xs: '12px',
+  sm: '13px',
   medium: '16px',
   subtitle: '20px',
   title_2: '29px',
