@@ -250,6 +250,7 @@ const SectionProject = styled.article`
 //* Links / Buttons
 
 const Button = styled.button`
+  all: unset;
   background-color: ${colors.fonts.title.normal};
   padding: 6px ${size.px.sm};
   height: 2rem;

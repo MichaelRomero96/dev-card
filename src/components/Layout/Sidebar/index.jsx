@@ -4,7 +4,7 @@ import '../../css/sidebar.css';
 import { gsap } from 'gsap';
 import HamburgerButton from '../../../components/HamburgerIcon';
 import profileImg from '../../../components/mock/profile.png';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import {
   FaTwitter,
   FaLinkedinIn,
@@ -13,7 +13,6 @@ import {
   FaStackOverflow,
   FaAdjust,
   FaPaperPlane,
-  FaCog,
   FaEnvelopeOpenText,
   FaBlog,
   FaFileAlt,
@@ -21,7 +20,7 @@ import {
   FaLaptopCode,
   FaUser,
   FaCaretDown,
-  FaBars,
+  FaInfoCircle,
 } from 'react-icons/fa';
 import Styled from './Styled';
 
@@ -55,143 +54,208 @@ const Sidebar = () => {
     });
   });
 
+  const [open, setOpen] = useState(true);
+
+  const location = useLocation();
+
   return (
     <div>
       <Styled.HeaderWrapper>
         <HamburgerButton action={() => setIsSidebarOpen((prev) => !prev)} />
-        <h1 className="header__title-2">Simon Doe</h1>
+        <h1 style={{ fontSize: '1.4rem', color: '#fff' }}>Simon Doe</h1>
       </Styled.HeaderWrapper>
-      <section ref={sectionRef} className="body">
-        <h1 className="header__title">
-          <a href="#">Simon Doe</a>
-        </h1>
-        <article className="navbar">
-          <img className="profile" src={profileImg} alt="Profile Image" />
-          <p className="description">
+      <Styled.Body ref={sectionRef}>
+        <Styled.HeaderTitle>Simon Doe</Styled.HeaderTitle>
+        <Styled.NavbarWrapper>
+          <Styled.ProfileImg src={profileImg} alt="Profile Image" />
+          <Styled.Description>
             Hi, my name is Simon Doe and I'm a senior software engineer. Welcome
             to my personal website!
-          </p>
-          <ul className="redes">
-            <li className="redes__icons">
-              <Link to="/twitter">
+          </Styled.Description>
+          <Styled.WrapperRedes>
+            <Styled.RedesIcons>
+              <Link to="/twitter" style={{ color: '#54b689' }}>
                 <FaTwitter />
               </Link>
-            </li>
-            <li className="redes__icons">
-              <Link to="/linkedin">
+            </Styled.RedesIcons>
+            <Styled.RedesIcons>
+              <Link to="/linkedin" style={{ color: '#54b689' }}>
                 <FaLinkedinIn />
               </Link>
-            </li>
-            <li className="redes__icons">
-              <Link to="/github">
+            </Styled.RedesIcons>
+            <Styled.RedesIcons>
+              <Link to="/github" style={{ color: '#54b689' }}>
                 <FaGithubAlt />
               </Link>
-            </li>
-            <li className="redes__icons">
-              <Link to="overflow">
+            </Styled.RedesIcons>
+            <Styled.RedesIcons>
+              <Link to="overflow" style={{ color: '#54b689' }}>
                 <FaStackOverflow />
               </Link>
-            </li>
-            <li className="redes__icons">
-              <Link to="codepen">
+            </Styled.RedesIcons>
+            <Styled.RedesIcons>
+              <Link to="codepen" style={{ color: '#54b689' }}>
                 <FaCodepen />
               </Link>
-            </li>
-          </ul>
-          <hr />
-        </article>
+            </Styled.RedesIcons>
+          </Styled.WrapperRedes>
+          <Styled.Hr />
+        </Styled.NavbarWrapper>
         <article>
-          <ul className="anclas navbar">
-            <li className="anclas__links">
-              <NavLink className="anclas__icons" to="/about-me">
-                <FaUser className="anclas__icon" />
+          <Styled.AnclasWrapper>
+            <Styled.Anclas>
+              <Styled.AnclasLink
+                className={location.pathname === '/about-me' ? 'active' : ''}
+                to="/about-me"
+              >
+                <FaUser
+                  style={{
+                    marginRight: '0.5rem',
+                    verticalAlign: '-0.125em',
+                  }}
+                />
                 About Me
-              </NavLink>
-            </li>
-            <li className="anclas__links">
-              <NavLink className="anclas__icons" to="/portfolio">
-                <FaLaptopCode className="anclas__icon" />
+              </Styled.AnclasLink>
+            </Styled.Anclas>
+            <Styled.Anclas>
+              <Styled.AnclasLink
+                className={location.pathname === '/portfolio' ? 'active' : ''}
+                to="/portfolio"
+              >
+                <FaLaptopCode
+                  style={{
+                    marginRight: '0.5rem',
+                    verticalAlign: '-0.125em',
+                  }}
+                />
                 Portfolio
-              </NavLink>
-            </li>
-            <li className="anclas__links">
-              <NavLink className="anclas__icons" to="/sevices">
-                <FaToolbox className="anclas__icon" />
+              </Styled.AnclasLink>
+            </Styled.Anclas>
+            <Styled.Anclas>
+              <Styled.AnclasLink
+                className={location.pathname === '/sevices' ? 'active' : ''}
+                to="/sevices"
+              >
+                <FaToolbox
+                  style={{
+                    marginRight: '0.5rem',
+                    verticalAlign: '-0.125em',
+                  }}
+                />
                 Sevices & Pricing
-              </NavLink>
-            </li>
-            <li className="anclas__links">
-              <NavLink className="anclas__icons" to="/resume">
-                <FaFileAlt className="anclas__icon" />
+              </Styled.AnclasLink>
+            </Styled.Anclas>
+            <Styled.Anclas>
+              <Styled.AnclasLink
+                className={location.pathname === '/resume' ? 'active' : ''}
+                to="/resume"
+              >
+                <FaFileAlt
+                  style={{
+                    marginRight: '0.5rem',
+                    verticalAlign: '-0.125em',
+                  }}
+                />
                 Resume
-              </NavLink>
-            </li>
-            <li className="anclas__links">
-              <NavLink className="anclas__icons" to="/blog">
-                <FaBlog className="anclas__icon" />
+              </Styled.AnclasLink>
+            </Styled.Anclas>
+            <Styled.Anclas>
+              <Styled.AnclasLink
+                className={location.pathname === '/blog' ? 'active' : ''}
+                to="/blog"
+              >
+                <FaBlog
+                  style={{
+                    marginRight: '0.5rem',
+                    verticalAlign: '-0.125em',
+                  }}
+                />
                 Blog
-              </NavLink>
-            </li>
-            <li className="anclas__links">
-              <NavLink className="anclas__icons" to="/contact">
-                <FaEnvelopeOpenText className="anclas__icon" />
+              </Styled.AnclasLink>
+            </Styled.Anclas>
+            <Styled.Anclas>
+              <Styled.AnclasLink
+                className={location.pathname === '/contact' ? 'active' : ''}
+                to="/contact"
+              >
+                <FaEnvelopeOpenText
+                  style={{
+                    marginRight: '0.5rem',
+                    verticalAlign: '-0.125em',
+                  }}
+                />
                 Contact
-              </NavLink>
-            </li>
-            <div>
-              <details className="info-extra">
-                <summary>
-                  <FaCog className="anclas__icons" /> More Pages
-                  <FaCaretDown className="icon-arrow" />
-                </summary>
-                <ul className="details navbar">
-                  <li>
-                    <NavLink className="details__info" to="/project-page">
-                      Project Page
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink className="details__info" to="/blog1">
-                      Blog Home 1
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink className="details__info" to="/blog2">
-                      Blog Home 2
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink className="details__info" to="/blog-post">
-                      Blog Post
-                    </NavLink>
-                  </li>
-                </ul>
-              </details>
-            </div>
-          </ul>
+              </Styled.AnclasLink>
+            </Styled.Anclas>
+          </Styled.AnclasWrapper>
+
+          <Styled.AnclaMorePage
+            to="/more-pages"
+            className={location.pathname === '/more-pages' ? 'active' : ''}
+            onClick={() => setOpen(!open)}
+          >
+            <FaInfoCircle
+              style={{ marginRight: '10px', verticalAlign: '-0.125em' }}
+            />
+            More Pages
+            <FaCaretDown />
+          </Styled.AnclaMorePage>
+
+          <Styled.WrapperMorePages className={open ? 'list-show' : ''}>
+            <Styled.ListMorePages>
+              <Styled.ListLinksMorePages href="">
+                Project Page
+              </Styled.ListLinksMorePages>
+            </Styled.ListMorePages>
+            <Styled.ListMorePages>
+              <Styled.ListLinksMorePages href="">
+                Blog Home 1
+              </Styled.ListLinksMorePages>
+            </Styled.ListMorePages>
+            <Styled.ListMorePages>
+              <Styled.ListLinksMorePages href="">
+                Blog Home 2
+              </Styled.ListLinksMorePages>
+            </Styled.ListMorePages>
+            <Styled.ListMorePages>
+              <Styled.ListLinksMorePages href="">
+                Blog Home 3
+              </Styled.ListLinksMorePages>
+            </Styled.ListMorePages>
+          </Styled.WrapperMorePages>
         </article>
         <article>
           <div>
-            <button className="btn">
-              <Link to="/hireme">
-                <FaPaperPlane className="icon-paperplane" />
+            <Styled.Button>
+              <Link style={{ color: '#fff', fontSize: '15px' }} to="/hireme">
+                <FaPaperPlane
+                  style={{
+                    marginRight: '0.5rem',
+                    verticalAlign: '-0.125em',
+                  }}
+                />
                 Hire Me
               </Link>
-            </button>
+            </Styled.Button>
           </div>
-          <hr className="btn-darkmode" />
+          <Styled.Hr style={{ margin: '1rem 0' }} />
           <div>
-            <h4 className="darkmode">
-              <FaAdjust className="anclas__icons icon-darkmode" />
+            <Styled.TitleDarkMode>
+              <FaAdjust
+                style={{
+                  marginRight: '0.5rem',
+                  verticalAlign: '-0.125em',
+                }}
+              />
               Dark Mode
-            </h4>
-            <label className="switch">
+            </Styled.TitleDarkMode>
+            <label class="switch">
               <input type="checkbox" />
-              <span className="slider"></span>
+              <span class="slider"></span>
             </label>
           </div>
         </article>
-      </section>
+      </Styled.Body>
     </div>
   );
 };
