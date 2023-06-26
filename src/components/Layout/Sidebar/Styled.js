@@ -91,6 +91,10 @@ const Body = styled.section`
     border-radius: 10px;
   }
 
+  @media (${breakpoints.lgDown}) {
+    height: 100%;
+  }
+
   @media (${breakpoints.mmdDown}) {
     position: relative;
     width: 100%;

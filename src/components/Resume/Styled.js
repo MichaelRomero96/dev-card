@@ -21,6 +21,10 @@ const Container = styled.div`
   }
 
   @media (${breakpoints.lgUp}) {
+    margin-left: 400px;
+  }
+
+  @media (${breakpoints.lgUp}) {
     width: 60%;
     margin-left: 350px;
   }
@@ -62,6 +66,12 @@ const WrapperUser = styled.div`
 const WrapperProfile = styled.div`
   display: flex;
   margin-bottom: 4rem;
+
+  @media (${breakpoints.lgDown}) {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 
   @media (${breakpoints.smDown}) {
     margin-top: 2rem;
@@ -242,6 +252,10 @@ const SectionArticle = styled.section`
 const SectionProject = styled.article`
   margin-bottom: 8rem;
 
+  @media (${breakpoints.lgDown}) {
+    margin-bottom: 0;
+  }
+
   @media (${breakpoints.mmdDown}) {
     margin-bottom: 3rem;
   }
@@ -314,6 +328,11 @@ const HrResume = styled.hr`
 const Flex = styled.div`
   display: flex;
   gap: 5rem;
+
+  @media (${breakpoints.lgDown}) {
+    flex-direction: column;
+    gap: 1rem;
+  }
 
   @media (${breakpoints.mmdDown}) {
     display: unset;

@@ -427,6 +427,7 @@ const Resume = () => {
           Template Copyright © {''}
           <a
             style={{
+              color: '#54B686',
               '&:hover': { textDecoration: 'underline', color: '#43946d' },
             }}
             href="#"
