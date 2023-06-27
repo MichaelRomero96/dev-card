@@ -1,3 +1,24 @@
+const paletteColors = {
+  primary: '#333333',
+  secondary: '#555555',
+  error: '#DC3545',
+  warning: '#FFC107',
+  info: '#17A2B8',
+  success: '#28A745',
+  white: '#fff',
+  black: '#000',
+  text: {
+    primaryEmphasis: '#858585',
+    secundaryEmphasis: '#999999',
+    successEmphasis: '#7EC48F',
+    dangerEmphasis: '#EA868F',
+    warningEmphasis: '#FFDA6A',
+    body: '#AAAAAA',
+    bodySecundary: '#AAAAAABF',
+    bodySecundaryEmphasis: '#AAAAAA80',
+  },
+};
+
 const fontColors = {
   text: {
     lightest: 'rgba(41, 41, 41, 0.4)',

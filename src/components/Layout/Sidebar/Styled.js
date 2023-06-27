@@ -6,6 +6,7 @@ const { breakpoints, colors } = theme;
 
 const HeaderWrapper = styled.div`
   display: none;
+
   @media (${breakpoints.mmdDown}) {
     display: block;
     text-align: center;
