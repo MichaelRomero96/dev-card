@@ -133,6 +133,20 @@ const Sidebar = () => {
             </Styled.Anclas>
             <Styled.Anclas>
               <Styled.AnclasLink
+                className={location.pathname === '/resume' ? 'active' : ''}
+                to="/resume"
+              >
+                <FaFileAlt
+                  style={{
+                    marginRight: '0.5rem',
+                    verticalAlign: '-0.125em',
+                  }}
+                />
+                Resume
+              </Styled.AnclasLink>
+            </Styled.Anclas>
+            {/* <Styled.Anclas>
+              <Styled.AnclasLink
                 className={location.pathname === '/sevices' ? 'active' : ''}
                 to="/sevices"
               >
@@ -186,10 +200,10 @@ const Sidebar = () => {
                 />
                 Contact
               </Styled.AnclasLink>
-            </Styled.Anclas>
+            </Styled.Anclas> */}
           </Styled.AnclasWrapper>
 
-          <Styled.AnclaMorePage
+          {/*  <Styled.AnclaMorePage
             to="/more-pages"
             className={location.pathname === '/more-pages' ? 'active' : ''}
             onClick={() => setOpen(!open)}
@@ -200,8 +214,8 @@ const Sidebar = () => {
             More Pages
             <FaCaretDown />
           </Styled.AnclaMorePage>
-
-          <Styled.WrapperMorePages className={open ? 'list-show' : ''}>
+ */}
+          {/*  <Styled.WrapperMorePages className={open ? 'list-show' : ''}>
             <Styled.ListMorePages>
               <Styled.ListLinksMorePages href="">
                 Project Page
@@ -222,11 +236,11 @@ const Sidebar = () => {
                 Blog Home 3
               </Styled.ListLinksMorePages>
             </Styled.ListMorePages>
-          </Styled.WrapperMorePages>
+          </Styled.WrapperMorePages> */}
         </article>
         <article>
           <div>
-            <Styled.Button>
+            {/* <Styled.Button>
               <Link style={{ color: '#fff', fontSize: '15px' }} to="/hireme">
                 <FaPaperPlane
                   style={{
@@ -236,11 +250,11 @@ const Sidebar = () => {
                 />
                 Hire Me
               </Link>
-            </Styled.Button>
+            </Styled.Button> */}
           </div>
           <Styled.Hr style={{ margin: '1rem 0' }} />
           <div>
-            <Styled.TitleDarkMode>
+            {/* <Styled.TitleDarkMode>
               <FaAdjust
                 style={{
                   marginRight: '0.5rem',
@@ -252,7 +266,7 @@ const Sidebar = () => {
             <label class="switch">
               <input type="checkbox" />
               <span class="slider"></span>
-            </label>
+            </label> */}
           </div>
         </article>
       </Styled.Body>
