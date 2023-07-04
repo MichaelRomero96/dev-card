@@ -14,6 +14,11 @@ const fontColors = {
 
 const colors = {
   fonts: fontColors,
+  palette: {
+    primary: '#54b686',
+    secondary: '#43946d',
+    tertiary: '#FAFAFA',
+  },
 };
 
 const fontSize = {
