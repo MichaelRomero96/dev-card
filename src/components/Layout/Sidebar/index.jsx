@@ -156,6 +156,20 @@ const Sidebar = () => {
             </Styled.Anclas>
             {/* <Styled.Anclas>
               <Styled.AnclasLink
+                className={location.pathname === '/resume' ? 'active' : ''}
+                to="/resume"
+              >
+                <FaFileAlt
+                  style={{
+                    marginRight: '0.5rem',
+                    verticalAlign: '-0.125em',
+                  }}
+                />
+                Resume
+              </Styled.AnclasLink>
+            </Styled.Anclas>
+            {/* <Styled.Anclas>
+              <Styled.AnclasLink
                 className={location.pathname === '/sevices' ? 'active' : ''}
                 to="/sevices"
               >
