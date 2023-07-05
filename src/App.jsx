@@ -11,7 +11,7 @@ const App = () => {
       <Layout />
       <Routes>
         <Route path="/resume" element={<Resume />} />
-        <Route path="/resume" element={<AboutMe />} />
+        <Route path="/about-me" element={<AboutMe />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
         <Route path="/portfolio/:projectId" element={<ProjectDetails />} />
       </Routes>
