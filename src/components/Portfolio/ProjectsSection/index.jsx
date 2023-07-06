@@ -1,21 +1,16 @@
 import React from 'react';
 import Card from '../Card';
 import theme from '../../../theme';
+import Styled from '../Styled';
 
 const ProjectsSection = ({ projects }) => {
   const { colors } = theme;
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        gap: '30px',
-      }}
-    >
+    <Styled.Container>
       {projects.map((project) => (
         <Card key={project.title} project={project} />
       ))}
-    </div>
+    </Styled.Container>
   );
 };
 

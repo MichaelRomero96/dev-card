@@ -1,7 +1,10 @@
 import { useParams } from 'react-router-dom';
 import db from '../../../db';
-import PageContainer from '../../common/PageContainer';
 import theme from '../../../theme';
+import Styled from './Styled';
+import '../../css/buttonPortfolio.css';
+import RedesIconWrapper from '../../Resume/RedesIconWrapper';
+import { FaGithub } from 'react-icons/fa';
 
 const ProjectDetails = () => {
   const { colors } = theme;
@@ -12,125 +15,132 @@ const ProjectDetails = () => {
 
   return (
     <>
-      <div
-        style={{
-          backgroundColor: colors.palette.tertiary,
-          paddingTop: 50,
-          paddingBottom: 30,
-        }}
-      >
-        <PageContainer>
-          <div>
-            <h1
-              style={{
-                textAlign: 'center',
-                margin: 0,
-              }}
-            >
-              {project.title}
-            </h1>
-            <p
-              style={{
-                textAlign: 'center',
-                margin: '15px 0',
-                color: theme.colors.fonts.text.normal,
-              }}
-            >
-              {project.description}
-            </p>
-          </div>
-        </PageContainer>
-      </div>
-      <div
-        style={{
-          paddingTop: 50,
-          paddingBottom: 30,
-        }}
-      >
-        <PageContainer>
-          <div
-            style={{
-              minWidth: '100%',
-              backgroundColor: colors.palette.tertiary,
-              border: '1px solid #F3F3F3F3',
-              padding: '30px',
-              display: 'grid',
-              gridTemplateColumns: '300px 1fr',
-              gap: '20px',
-            }}
-          >
-            <figure>
-              <img
-                style={{ height: '300px' }}
-                src={project.image}
-                alt="project"
-              />
-            </figure>
-            <div style={{ display: 'grid', gap: '10px' }}>
-              <h2 style={{ marginBottom: '10px' }}>
-                {project.details.purpose}
-              </h2>
-              <a href={project.details.webSite} target="_blank">
-                Sitio web
-              </a>
-              <p>{project.details.detailedDescription}</p>
-              <div>
-                <h4 style={{ marginBottom: '10px' }}>Requerimientos</h4>
-                <ul>
-                  {project.details?.requeriments.map((requirement) => (
-                    <li style={{ marginBottom: '5px' }} key={requirement}>
-                      - {requirement}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+      <div>
+        <div
+          style={{
+            backgroundColor: colors.palette.tertiary,
+            paddingTop: 50,
+            paddingBottom: 30,
+          }}
+        >
+          <Styled.PageContainerDetails>
+            <div>
+              <h1
+                style={{
+                  textAlign: 'center',
+                  margin: 0,
+                }}
+              >
+                {project.title}
+              </h1>
+              <Styled.DescriptionTitle>
+                {project.description}
+              </Styled.DescriptionTitle>
             </div>
-          </div>
-          <div style={{ marginTop: '50px' }}>
-            <h2 style={{ marginBottom: '15px' }}>Descripción General</h2>
-            <p>{project.details.overview}</p>
-          </div>
-          <div style={{ marginTop: '50px' }}>
-            <h2 style={{ marginBottom: '15px' }}>Desafío / Problema</h2>
-            <p>{project.details.challenge}</p>
-          </div>
-          <div style={{ marginTop: '50px' }}>
-            <h2 style={{ marginBottom: '15px' }}>Solución</h2>
-            <p>{project.details.solution}</p>
-          </div>
-          <div style={{ marginTop: '50px' }}>
-            <h2 style={{ marginBottom: '20px' }}>Resultados</h2>
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(4, 1fr)',
-                gap: '10px',
-              }}
-            >
-              {project.details.results.map((result) => (
-                <div
+          </Styled.PageContainerDetails>
+        </div>
+        <Styled.WrapperBody>
+          <Styled.WrapperPageContainerDetails>
+            <Styled.WrapperDetails>
+              <figure>
+                <Styled.ImgDetails src={project.image} alt="project" />
+              </figure>
+              <Styled.Wrapperinfo>
+                <Styled.TitlePersonal>
+                  {project.details.purpose}
+                </Styled.TitlePersonal>
+                <button className="button">
+                  <a
+                    style={{ color: '#47b5ff', fontWeight: '700' }}
+                    href={project.details.webSite}
+                    target="_blank"
+                  >
+                    <span className="span">Sitio web</span>
+                  </a>
+                </button>
+                <p
                   style={{
-                    marginBottom: '10px',
-                    border: `1px solid #F3F3F3F3`,
-                    backgroundColor: colors.palette.tertiary,
-                    padding: '10px',
+                    fontSize: '15px',
+                    color: '#4f4f4f',
+                    marginBottom: '12px',
                   }}
                 >
-                  <p
+                  {project.details.detailedDescription}
+                </p>
+                <div>
+                  <h4 style={{ marginBottom: '12px' }}>Requerimientos</h4>
+                  <ul>
+                    {project.details?.requeriments.map((requirement) => (
+                      <li
+                        style={{
+                          marginBottom: '5px',
+                          fontSize: '14px',
+                          color: '#4f4f4f',
+                        }}
+                        key={requirement}
+                      >
+                        - {requirement}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Styled.Wrapperinfo>
+            </Styled.WrapperDetails>
+            <Styled.WrapperResultado>
+              <h2
+                style={{
+                  marginBottom: '20px',
+                  textAlign: 'center',
+                  color: '#dff6ff',
+                }}
+              >
+                Resultados
+              </h2>
+              <Styled.Resultados>
+                {project.details.results.map((result) => (
+                  <div
                     style={{
-                      marginBottom: '15px',
-                      color: colors.palette.primary,
+                      marginBottom: '10px',
+                      border: `1px solid #F3F3F3F3`,
+                      backgroundColor: colors.palette.tertiary,
+                      padding: '10px',
                     }}
                   >
-                    {result.title}
-                  </p>
-                  <p>{result.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </PageContainer>
+                    <p
+                      style={{
+                        marginBottom: '15px',
+                        color: colors.palette.primary,
+                        fontWeight: '700',
+                        textAlign: 'center',
+                      }}
+                    >
+                      {result.title}
+                    </p>
+                    <p
+                      style={{
+                        color: colors.fonts.text.normal,
+                        fontSize: '14px',
+                      }}
+                    >
+                      {result.description}
+                    </p>
+                  </div>
+                ))}
+              </Styled.Resultados>
+            </Styled.WrapperResultado>
+          </Styled.WrapperPageContainerDetails>
+        </Styled.WrapperBody>
       </div>
+      <Styled.Footer>
+        <Styled.TextFooter>
+          Dev card v 1.0{' '}
+          <RedesIconWrapper>
+            <a href="https://github.com/MichaelRomero96/dev-card">
+              <FaGithub style={{ cursor: 'pointer', marginLeft: '10px' }} />
+            </a>
+          </RedesIconWrapper>
+        </Styled.TextFooter>
+      </Styled.Footer>
     </>
   );
 };

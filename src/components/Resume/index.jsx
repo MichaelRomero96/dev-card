@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import {
+  FaCodeBranch,
   FaEnvelopeSquare,
   FaFilePdf,
   FaGithub,
@@ -9,10 +10,11 @@ import {
   FaPhoneSquare,
   FaTwitter,
 } from 'react-icons/fa';
-import resumeImg from './../mock/resume-profile.png';
+import resumeImg from '../../../public/img/profileSidebarNico.png';
 import db from '../../db';
 import Styled from './Styled';
 import RedesIconWrapper from './RedesIconWrapper';
+import cvNico from '../../../public/assets/cv.pdf';
 
 const Resume = () => {
   const { resume, home } = db;
@@ -23,16 +25,17 @@ const Resume = () => {
           <Styled.HeaderTitle>Online Resume</Styled.HeaderTitle>
 
           <Styled.Button>
-            <RedesIconWrapper hideBg>
-              <FaFilePdf />
-            </RedesIconWrapper>
-            <Link
+            <a
               style={{ color: '#fff', fontSize: '1rem' }}
-              to="https://themes.3rdwavemedia.com/resources/sketch-template/devresume-sketch-sketch-resume-template-for-software-developers/"
+              href={cvNico}
+              download
               className="btn-header__cta"
             >
+              <RedesIconWrapper hideBg>
+                <FaFilePdf />
+              </RedesIconWrapper>
               Download PDF Version
-            </Link>
+            </a>
           </Styled.Button>
         </Styled.WrapperHeader>
 
@@ -47,13 +50,13 @@ const Resume = () => {
           <ul>
             <li>
               <FaPhoneSquare />
-              <Styled.ContactLinks href="#">
+              <Styled.ContactLinks href="https://api.whatsapp.com/send?phone=+573227669542&text=Hello%20Nicolas">
                 {resume.contact.number}
               </Styled.ContactLinks>
             </li>
             <li>
               <FaEnvelopeSquare />
-              <Styled.ContactLinks href="#">
+              <Styled.ContactLinks href="mailto:nicogarzon131@gmail.com">
                 {resume.contact.email}
               </Styled.ContactLinks>
             </li>
@@ -78,19 +81,24 @@ const Resume = () => {
           <Styled.ProfileImg src={resumeImg} alt="Imagen Resumen" />
 
           <Styled.ProfileDescription>
-            Summarise your career here.
-            <Styled.DescriptionLink href="#">
+            I'm a Junior Web Developer with experience in HTML, CSS, and
+            JavaScript, as well as the React framework and TypeScript, I am
+            capable of creating dynamic and functional web applications.
+            Additionally, I have skills in using libraries such as TailwindCSS
+            and Styled Components to design modern and attractive interfaces. My
+            focus is on creating clean and modular code, along with a solid
+            understanding of best practices in web development. I am excited to
+            continue learning and growing in the field of web programming, and I
+            am ready to bring my passion and knowledge to a dynamic and
+            success-oriented team.
+            {/* <Styled.DescriptionLink href="#">
               You can make a PDF version of your resume using our free Sketch
               template here
-            </Styled.DescriptionLink>
-            . Donec quam felis, ultricies nec, pellentesque eu. Lorem ipsum
-            dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-            eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
-            parturient montes, nascetur ridiculus mus. Donec quam felis,
-            ultricies nec, pellentesque eu, pretium quis, sem. Maecenas nec odio
-            et ante tincidunt tempus. Donec vitae sapien ut libero venenatis
-            faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus
-            tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.
+            </Styled.DescriptionLink> */}
+            {/* I have experience working on projects with React, Styled Components,
+            Tailwind CSS. I’m a self-sufficient person. I love working on
+            eye-catching user interfaces and I would like to venture more into
+            mobile development */}
           </Styled.ProfileDescription>
         </Styled.WrapperProfile>
       </section>
@@ -117,140 +125,64 @@ const Resume = () => {
 
                 <Styled.List>
                   <Styled.ListText>
-                    Lorem ipsum dolor sit amet, consectetuer.
+                    I gained technical experience.
                   </Styled.ListText>
                   <Styled.ListText>
-                    Aenean commodo ligula eget dolor.
+                    Fundamental teamwork skills.
                   </Styled.ListText>
-                  <Styled.ListText>
-                    Etiam ultricies nisi vel augue.
-                  </Styled.ListText>
+                  <Styled.ListText>Effective communication.</Styled.ListText>
                 </Styled.List>
-              </div>
-
-              <div>
-                <Styled.WrapperTexts>
-                  <Styled.TextSubtitle>
-                    {resume.workExperiences2.name}
-                  </Styled.TextSubtitle>
-                  <Styled.TextCompany>
-                    {resume.workExperiences2.companyAndDate}
-                  </Styled.TextCompany>
-                </Styled.WrapperTexts>
-                <p>{resume.workExperiences2.name}</p>
-                <Styled.TextRole>
-                  {resume.workExperiences2.role}
-                </Styled.TextRole>
-
-                <Styled.List>
-                  <Styled.ListText>
-                    Lorem ipsum dolor sit amet, consectetuer.
-                  </Styled.ListText>
-                  <Styled.ListText>
-                    Aenean commodo ligula eget dolor.
-                  </Styled.ListText>
-                </Styled.List>
-              </div>
-
-              <div>
-                <Styled.WrapperTexts>
-                  <Styled.TextSubtitle>
-                    {resume.workExperiences3.name}
-                  </Styled.TextSubtitle>
-                  <Styled.TextCompany>
-                    {resume.workExperiences3.companyAndDate}
-                  </Styled.TextCompany>
-                </Styled.WrapperTexts>
-                <p>{resume.workExperiences3.name}</p>
-                <Styled.TextRole>
-                  {resume.workExperiences3.role}
-                </Styled.TextRole>
-              </div>
-
-              <div>
-                <Styled.WrapperTexts>
-                  <Styled.TextSubtitle>
-                    {resume.workExperiences4.name}
-                  </Styled.TextSubtitle>
-                  <Styled.TextCompany>
-                    {resume.workExperiences4.companyAndDate}
-                  </Styled.TextCompany>
-                </Styled.WrapperTexts>
-                <p>{resume.workExperiences4.name}</p>
-                <Styled.TextRole>
-                  {resume.workExperiences4.role}
-                </Styled.TextRole>
-              </div>
-
-              <div>
-                <Styled.WrapperTexts>
-                  <Styled.TextSubtitle>
-                    {resume.workExperiences5.name}
-                  </Styled.TextSubtitle>
-                  <Styled.TextCompany>
-                    {resume.workExperiences5.companyAndDate}
-                  </Styled.TextCompany>
-                </Styled.WrapperTexts>
-                <p>{resume.workExperiences5.name}</p>
-                <Styled.TextRole>
-                  {resume.workExperiences5.role}
-                </Styled.TextRole>
-              </div>
-
-              <div>
-                <Styled.WrapperTexts>
-                  <Styled.TextSubtitle>
-                    {resume.workExperiences6.name}
-                  </Styled.TextSubtitle>
-                  <Styled.TextCompany>
-                    {resume.workExperiences6.companyAndDate}
-                  </Styled.TextCompany>
-                </Styled.WrapperTexts>
-                <p>{resume.workExperiences6.name}</p>
-                <Styled.TextRole>
-                  {resume.workExperiences6.role}
-                </Styled.TextRole>
               </div>
             </Styled.Article>
             <Styled.SectionProject>
-              <Styled.MainTitles>
+              <Styled.MainTitles style={{ marginTop: '3rem' }}>
                 <Styled.SpanMainTitles></Styled.SpanMainTitles>Projects
               </Styled.MainTitles>
 
               <div>
                 <Styled.WrapperTexts>
                   <Styled.TextSubtitle>
-                    {resume.projects.name}
+                    {resume.projects.name}{' '}
+                    <a href="https://github.com/Niico4/Constructora">
+                      <FaGithub
+                        style={{
+                          width: '18px',
+                          height: '18px',
+                          verticalAlign: 'middle',
+                          color: '#4f4f4f',
+                          marginLeft: '1rem',
+                        }}
+                      />
+                    </a>
                   </Styled.TextSubtitle>
                   <Styled.TextCompany>
-                    {resume.projects.status}
+                    {resume.projects.status}{' '}
                   </Styled.TextCompany>
                 </Styled.WrapperTexts>
-                <Styled.TextRole>{resume.projects.desription}</Styled.TextRole>
+                <Styled.TextRole>{resume.projects.desription} </Styled.TextRole>
               </div>
 
               <div>
                 <Styled.WrapperTexts>
                   <Styled.TextSubtitle>
                     {resume.projects2.name}
+                    <a href="https://github.com/MichaelRomero96/dev-card">
+                      <FaGithub
+                        style={{
+                          width: '18px',
+                          height: '18px',
+                          verticalAlign: 'middle',
+                          color: '#4f4f4f',
+                          marginLeft: '1rem',
+                        }}
+                      />
+                    </a>
                   </Styled.TextSubtitle>
                   <Styled.TextCompany>
                     {resume.projects2.status}
                   </Styled.TextCompany>
                 </Styled.WrapperTexts>
                 <Styled.TextRole>{resume.projects2.desription}</Styled.TextRole>
-              </div>
-
-              <div>
-                <Styled.WrapperTexts>
-                  <Styled.TextSubtitle>
-                    {resume.projects3.name}
-                  </Styled.TextSubtitle>
-                  <Styled.TextCompany>
-                    {resume.projects3.status}
-                  </Styled.TextCompany>
-                </Styled.WrapperTexts>
-                <Styled.TextRole>{resume.projects3.desription}</Styled.TextRole>
               </div>
             </Styled.SectionProject>
           </div>
@@ -265,25 +197,17 @@ const Resume = () => {
                 <Styled.TextSubtitle>Technical</Styled.TextSubtitle>
                 <ul>
                   <Styled.ListElementsAside>
-                    JavaScript/Angular/React/Vue
+                    HTML - CSS - TailwindCSS
                   </Styled.ListElementsAside>
                   <Styled.ListElementsAside>
-                    Python/ Ruby / PHP
+                    Material UI - Styled Components
                   </Styled.ListElementsAside>
                   <Styled.ListElementsAside>
-                    Node.js / ASP.NET
+                    JavaScript - React - TypeScript
                   </Styled.ListElementsAside>
+                  <Styled.ListElementsAside>Firebase</Styled.ListElementsAside>
                   <Styled.ListElementsAside>
-                    PostgreSQL / MySQL
-                  </Styled.ListElementsAside>
-                  <Styled.ListElementsAside>
-                    Object - oriented design
-                  </Styled.ListElementsAside>
-                  <Styled.ListElementsAside>
-                    Design and implement database structures
-                  </Styled.ListElementsAside>
-                  <Styled.ListElementsAside>
-                    Lead and deliver complex software systems
+                    Git - AirTable
                   </Styled.ListElementsAside>
                 </ul>
               </div>
@@ -322,35 +246,39 @@ const Resume = () => {
                   {resume.education.date}
                 </Styled.TextEducation>
               </div>
-
-              <div style={{ marginBottom: '1.5rem' }}>
-                <p style={{ marginBottom: '0.5rem' }}>
-                  {resume.education2.carrer}
-                </p>
-                <Styled.TextEducation>
-                  {resume.education2.school}
-                </Styled.TextEducation>
-                <Styled.TextEducation>
-                  {resume.education2.date}
-                </Styled.TextEducation>
-              </div>
             </Styled.Article>
             <Styled.Article>
               <Styled.MainTitles>
-                <Styled.SpanMainTitles></Styled.SpanMainTitles>Awards
+                <Styled.SpanMainTitles></Styled.SpanMainTitles>Certifications
               </Styled.MainTitles>
 
               <div>
-                <p>{resume.awards.name}</p>
-                <Styled.TextAwards>
-                  {resume.awards.awardAndDate}
-                </Styled.TextAwards>
-              </div>
-
-              <div>
-                <p>{resume.awards2.name}</p>
-                <Styled.TextAwards>
-                  {resume.awards2.awardAndDate}
+                <p>{resume.certifications.name}</p>
+                <Styled.TextAwards style={{ marginTop: '1rem' }}>
+                  <ul>
+                    <a
+                      style={{ color: '#1363df' }}
+                      href="https://www.udemy.com/certificate/UC-0d2c70fe-ce8b-4a65-800c-89c6e62b97fc/"
+                    >
+                      <li style={{ marginBottom: '1rem' }}>
+                        {resume.certifications.typeScript}
+                      </li>
+                    </a>
+                    <a
+                      style={{ color: '#1363df' }}
+                      href="https://www.udemy.com/certificate/UC-b85f45c6-9e85-49ab-a2d7-ac8ca20ba6b4/"
+                    >
+                      <li style={{ marginBottom: '1rem' }}>
+                        {resume.certifications.html}
+                      </li>
+                    </a>
+                    <a
+                      style={{ color: '#1363df' }}
+                      href="https://www.udemy.com/certificate/UC-caa20bb8-b619-4753-96cf-89b04c307808/"
+                    >
+                      <li>{resume.certifications.css}</li>
+                    </a>
+                  </ul>
                 </Styled.TextAwards>
               </div>
             </Styled.Article>
@@ -361,10 +289,10 @@ const Resume = () => {
 
               <ul>
                 <Styled.ListElementsAside>
-                  English (Native)
+                  Spanish (Native)
                 </Styled.ListElementsAside>
                 <Styled.ListElementsAside style={{ marginBottom: '2rem' }}>
-                  Spanish (Professional)
+                  English (Basic)
                 </Styled.ListElementsAside>
               </ul>
             </Styled.Article>
@@ -374,11 +302,8 @@ const Resume = () => {
               </Styled.MainTitles>
 
               <ul>
-                <Styled.ListElementsAside>Climbing</Styled.ListElementsAside>
-                <Styled.ListElementsAside>
-                  Snowboarding
-                </Styled.ListElementsAside>
-                <Styled.ListElementsAside>Photography</Styled.ListElementsAside>
+                <Styled.ListElementsAside>Gaming</Styled.ListElementsAside>
+                <Styled.ListElementsAside>Technology</Styled.ListElementsAside>
                 <Styled.ListElementsAside style={{ marginBottom: '2rem' }}>
                   Travelling
                 </Styled.ListElementsAside>
@@ -392,31 +317,33 @@ const Resume = () => {
         <Styled.Redes>
           <li>
             <RedesIconWrapper>
-              <a href="#">
+              <a href="https://github.com/Niico4/">
                 <RedesIconWrapper>
                   <FaGithub />
                 </RedesIconWrapper>
-                <Styled.RedesText>gitgub.com/username</Styled.RedesText>
+                <Styled.RedesText>gitgub.com/Niico4</Styled.RedesText>
               </a>
             </RedesIconWrapper>
           </li>
           <li>
             <RedesIconWrapper>
-              <a href="#">
+              <a href="https://www.linkedin.com/in/nicolasgarzon131/">
                 <RedesIconWrapper>
                   <FaLinkedinIn />
                 </RedesIconWrapper>
-                <Styled.RedesText>linkedin.com/in/username</Styled.RedesText>
+                <Styled.RedesText>
+                  linkedin.com/in/nicolasgarzon131
+                </Styled.RedesText>
               </a>
             </RedesIconWrapper>
           </li>
           <li>
             <RedesIconWrapper>
-              <a href="#">
+              <a href="https://twitter.com/Niico4_">
                 <RedesIconWrapper>
                   <FaTwitter />
                 </RedesIconWrapper>
-                <Styled.RedesText>x@twittername</Styled.RedesText>
+                <Styled.RedesText>@Niico4_</Styled.RedesText>
               </a>
             </RedesIconWrapper>
           </li>
@@ -424,16 +351,12 @@ const Resume = () => {
       </Styled.SectionArticle>
       <Styled.Footer>
         <Styled.TextFooter>
-          Template Copyright © {''}
-          <a
-            style={{
-              color: '#54B686',
-              '&:hover': { textDecoration: 'underline', color: '#43946d' },
-            }}
-            href="#"
-          >
-            3rd Wave Media
-          </a>
+          Dev card v 1.0{' '}
+          <RedesIconWrapper>
+            <a href="https://github.com/MichaelRomero96/dev-card">
+              <FaGithub style={{ cursor: 'pointer', marginLeft: '10px' }} />
+            </a>
+          </RedesIconWrapper>
         </Styled.TextFooter>
       </Styled.Footer>
     </Styled.Container>

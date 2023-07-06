@@ -1,53 +1,53 @@
-import PageContainer from '../common/PageContainer';
+// import PageContainer from '../common/PageContainer';
 import db from '../../db';
 import theme from '../../theme';
 import ProjectsSection from './ProjectsSection';
+import Styled from './Styled';
+import RedesIconWrapper from '../Resume/RedesIconWrapper';
+import { FaGithub } from 'react-icons/fa';
 
 const Portfolio = () => {
   const { portfolio } = db;
-  const { colors, breakpoints, fontSize, size } = theme;
 
   return (
     <>
-      <div
-        style={{
-          backgroundColor: colors.palette.tertiary,
-          paddingTop: 50,
-          paddingBottom: 30,
-        }}
-      >
-        <PageContainer>
+      <Styled.WrapperContainer>
+        <Styled.PageContainer>
           <div>
             <h1
               style={{
                 textAlign: 'center',
-                margin: 0,
+                marginTop: '3rem',
               }}
             >
               Portafolio
             </h1>
-            <p
-              style={{
-                textAlign: 'center',
-                margin: '15px 0',
-                color: theme.colors.fonts.text.normal,
-              }}
-            >
+            <Styled.DescriptionPortfolio>
               {portfolio.description}
-            </p>
+            </Styled.DescriptionPortfolio>
           </div>
-        </PageContainer>
-      </div>
+        </Styled.PageContainer>
+      </Styled.WrapperContainer>
       <div
         style={{
           paddingTop: 50,
           paddingBottom: 30,
         }}
       >
-        <PageContainer>
+        <Styled.PageContainer>
           <ProjectsSection projects={portfolio.projects} />
-        </PageContainer>
+        </Styled.PageContainer>
       </div>
+      <Styled.Footer>
+        <Styled.TextFooter>
+          Dev card v 1.0{' '}
+          <RedesIconWrapper>
+            <a href="https://github.com/MichaelRomero96/dev-card">
+              <FaGithub style={{ cursor: 'pointer', marginLeft: '10px' }} />
+            </a>
+          </RedesIconWrapper>
+        </Styled.TextFooter>
+      </Styled.Footer>
     </>
   );
 };
