@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  .header{
+      background-color: #fafafa;
+      height: 21vw;
+      margin-left: auto;
+  }
+  
+  .headerabout-him{
+      width: 70%;
+      padding: 3rem;
+      padding-top: 70px;
+      display: flex;
+      margin-left: 20%;
+    
+  
+  }
+  
+  .headerdescription{
+      padding: 0px 12px;
+      width: 80%;
+  }
+  
+  .description__title{
+      font-size: 48px;
+      margin: 0px 0px 10px;
+  
+  }
+  
+  .profesion{
+  
+      font-size: 24px;
+      margin: 0px 0px 16px;
+      color: #4f4f4f;
+  
+  }
+  
+  .informacion{
+      font-size: 16px;
+      margin: 0px 0px 30px;
+      line-height: 1.5;
+  }
+  
+  .enlaces{
+      margin: 0px 0px 24px;
+  
+  }
+  
+  button{
+      all: unset;
+  }
+  
+  .enlaces_header1 {
+  
+      width: 200px ;
+      height: 60px;
+      margin: 0px 8px 16px 0px;
+      padding: 6px 16px;
+      background-color: #54b689;
+      color: #fff;
+      border-radius: 8px;
+      font-weight: 700;
+  }
+  
+  .enlaces_header2{
+  
+      width: 143px;
+      height: 60px;
+      margin: 0px 0px 16px;
+      padding: 6px 16px;
+      color: #fff;
+      background-color: #4f4f4f;
+      border-radius: 8px;
+      font-weight: 700;
+  
+  
+  
+  }
+
+  .profile-image{
+    height: 300px;
+    width: 400px;
+  }
+
+  .icon{
+    vertical-align: middle;
+    margin-right: 5px ;
+  }

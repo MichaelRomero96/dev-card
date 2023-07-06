@@ -1,0 +1,34 @@
+/* .items {
+    margin: 0 -12px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+} */
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0;
+}
+.card {
+  width: 330px;
+  height: 156px;
+  margin: 0 0 32px;
+  padding: 0 12px;
+}
+
+.item__title {
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: #292929;
+}
+
+.item__desc {
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.item__icon {
+  height: 45px;
+}
