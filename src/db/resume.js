@@ -1,102 +1,50 @@
 const contact = {
-  number: '0123 4567 890',
-  email: 'simon@yourwebsite.com',
+  number: '(+57) 3227669542',
+  email: 'nicogarzon131@gmail.com',
   web: 'www.yourwebsite.com',
-  location: 'New York',
+  location: 'Colombia',
 };
 
 const workExperiences = {
-  companyAndDate: 'Google | 2019 - Present',
-  role: 'Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Donec pede justo, fringilla vel. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.',
-};
-
-const workExperiences2 = {
-  companyAndDate: 'Apple | 2016 - 2019',
-  name: 'Lead Software Developer',
-  role: 'Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Donec pede justo, fringilla vel.',
-};
-
-const workExperiences3 = {
-  companyAndDate: 'Dropbox | 2014 - 2016',
-  name: 'Senior Software Developer',
-  role: 'Role description goes here ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-};
-
-const workExperiences4 = {
-  companyAndDate: 'Uber | 2013 - 2014',
-  name: 'Senior Developer',
-  role: 'Role description goes here ipsum dolor sit amet consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.',
-};
-const workExperiences5 = {
-  companyAndDate: 'Amazon | 2014 - 2016',
-  name: 'Backend Developer',
-  role: 'Role description goes here ipsum dolor sit amet consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus.',
-};
-
-const workExperiences6 = {
-  companyAndDate: 'Startup | 2013 - 2014',
-  name: 'Frontend Developer',
-  role: 'Role description goes here ipsum dolor sit amet consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.',
+  companyAndDate: 'Construction Company | 2022 - Present',
+  role: 'As a web application developer for a construction company, I had the valuable opportunity to be part of a two-person team responsible for creating and designing the website using HTML, CSS, and JavaScript. This project represented one of my first professional jobs, where I not only gained technical experience but also fundamental teamwork skills. Working side by side with my partner taught me the importance of effective communication, collaboration, and task division to achieve established goals. I learned to quickly adapt to the team’s needs and contribute with my ideas and knowledge to improve the final result. This experience has prepared me to collaborate efficiently in professional environments and develop web projects effectively as a team.',
 };
 
 const projects = {
-  status: 'Open Source',
-  name: 'Project Lorem Ipsum',
+  status: 'Close Source',
+  name: 'Construction Company',
   desription:
-    'You can use this section for your side projects. You can provide a project link here as well. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+    'During my experience as a web application developer, I had the opportunity to lead a project for a construction company, in which we sought to create a website to showcase their services, contact information, and highlight their extensive experience in the sector. Through close collaboration with the company’s team, we were able to design and develop a modern and attractive website. I implemented HTML, CSS, and JavaScript to create an intuitive and easy-to-navigate interface, highlighting the company’s achievements and outstanding projects. In addition, I incorporated interactive elements and optimized the site to ensure an exceptional user experience. The final result was a complete and professional website that reflected the construction company’s experience and commitment to excellence in their work.',
 };
 
 const projects2 = {
   status: 'Open Source',
-  name: 'Project Sed Fringilla',
+  name: 'Personal Project',
   desription:
-    'You can use this section for your side projects. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.',
-};
-
-const projects3 = {
-  status: 'Open Source',
-  name: 'Project Praesent',
-  desription:
-    'You can use this section for your side projects. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.',
+    'As part of a team of three people, I led an exciting project where we created a customizable and unique portfolio for each member. We used React, Styled Components, and CSS to develop an elegant and functional design. To streamline development, we implemented Vite as a bundler. Collaboration was key in this project, and we worked as a team using GitHub and Git to manage the code efficiently. We divided the project into parts and each took responsibility for a specific section, ensuring an equitable distribution of work. This experience allowed me to improve my communication, collaboration, and project management skills, as well as strengthen my knowledge in React and related technologies. The result was a personalized and high-quality portfolio that reflected the individuality and style of each of the members. This personal project not only demonstrates my mastery of key technologies but also my ability to work as a team and collaborate effectively in a collaborative development environment.',
 };
 
 const education = {
-  carrer: 'MSc in Computer Science',
-  school: 'University College London',
-  date: '2010 - 2011',
+  carrer: 'Web Developer',
+  school: 'Udemy',
+  date: '2021 - 2023',
 };
 
-const education2 = {
-  carrer: 'BSc Maths and Physics',
-  school: 'Imperial College London',
-  date: '2007 - 2010',
-};
-
-const awards = {
-  name: 'Award Lorem Ipsum',
-  awardAndDate: 'Microsoft lorem ipsum (2019)',
-};
-
-const awards2 = {
-  name: 'Award Donec Sodales',
-  awardAndDate: 'Oracle Aenean (2017)',
+const certifications = {
+  name: 'Online Course Certifications',
+  typeScript:
+    'https://www.udemy.com/certificate/UC-0d2c70fe-ce8b-4a65-800c-89c6e62b97fc/',
+  html: 'https://www.udemy.com/certificate/UC-b85f45c6-9e85-49ab-a2d7-ac8ca20ba6b4/',
+  css: 'https://www.udemy.com/certificate/UC-caa20bb8-b619-4753-96cf-89b04c307808/',
 };
 
 const resume = {
   contact,
   workExperiences,
-  workExperiences2,
-  workExperiences3,
-  workExperiences4,
-  workExperiences5,
-  workExperiences6,
   projects,
   projects2,
-  projects3,
   education,
-  education2,
-  awards,
-  awards2,
+  certifications,
 };
 
 export default resume;

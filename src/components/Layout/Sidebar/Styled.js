@@ -45,6 +45,9 @@ const AnclasWrapper = styled.ul`
 
   @media (${breakpoints.mmdDown}) {
     padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 `;
 
@@ -119,6 +122,10 @@ const ProfileImg = styled.img`
   max-width: 160px;
   border-radius: 50%;
   margin-bottom: 1rem;
+
+  @media (${breakpoints.mmdDown}) {
+    width: 130px;
+  }
 `;
 
 const Description = styled.p`
@@ -137,6 +144,11 @@ const RedesIcons = styled.li`
   background-color: #fff;
   border-radius: 50%;
   padding-top: 5px;
+
+  &:hover {
+    transform: scale(1.3);
+    background-color: #27b5ff;
+  }
 `;
 
 const Anclas = styled.li`

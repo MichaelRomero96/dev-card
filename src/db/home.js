@@ -1,6 +1,6 @@
 const user = {
-  name: 'Simon Doe',
-  profession: 'Senior Software Engineer',
+  name: 'Nicolas Garzón',
+  profession: 'Junior Frontend Developer',
   whatIDo:
     'I have more than 10 years experience building software for clients all over the world. Below is a quick overview of my main technical skill sets and technologies I use.',
   portfolio: 'https://themes.3rdwavemedia.com/devcard/bs5/2.0/portfolio.html',
@@ -8,9 +8,9 @@ const user = {
 };
 
 const sidebar = {
-  name: 'Simon Doe',
+  name: 'Nicolas Garzón',
   description:
-    'Hi, my name is Simon Doe and Im a senior software engineer. Welcome to my personal website!',
+    "Hi, my name is Nicolas Garzón and I'm a Junior Frontend Developer.Welcome to my personal website!",
 };
 
 const technologies = [

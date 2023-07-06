@@ -7,7 +7,7 @@ const { colors, breakpoints, fontSize, size } = theme;
 const Container = styled.div`
   width: 50%;
   margin-left: 600px;
-  color: ${colors.fonts.normal};
+  color: ${colors.fonts.text.normal};
 
   @media (${breakpoints.mmdDown}) {
     width: 95%;
@@ -273,7 +273,7 @@ const Button = styled.button`
   transition: all 0.5s;
 
   &:hover {
-    background-color: #43946d;
+    background-color: #1363df;
   }
 
   @media (${breakpoints.smDown}) {
@@ -305,12 +305,27 @@ const DescriptionLink = styled.a`
   }
 `;
 
+const RedesIcons = styled.li`
+  text-align: center;
+  line-height: 1.8;
+  width: 32px;
+  height: 32px;
+  background-color: #27b5ff;
+  border-radius: 50%;
+  padding-top: 5px;
+
+  &:hover {
+    background-color: #11a1f1;
+  }
+`;
+
 //* Images
 
 const ProfileImg = styled.img`
   max-width: 120px;
   height: 100%;
   margin-right: 3rem;
+  border-radius: 50%;
 
   @media (${breakpoints.smDown}) {
     margin: 0 auto;
@@ -374,4 +389,5 @@ export default {
   Footer,
   TextFooter,
   SectionArticle,
+  RedesIcons,
 };

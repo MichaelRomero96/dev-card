@@ -3,7 +3,7 @@ import '../../css/normalize.css';
 import '../../css/sidebar.css';
 import { gsap } from 'gsap';
 import HamburgerButton from '../../../components/HamburgerIcon';
-import profileImg from '../../../components/mock/profile.png';
+import profileImg from '../../../../public/img/profileSidebarNico.png';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import {
   FaTwitter,
@@ -62,39 +62,48 @@ const Sidebar = () => {
     <div>
       <Styled.HeaderWrapper>
         <HamburgerButton action={() => setIsSidebarOpen((prev) => !prev)} />
-        <h1 style={{ fontSize: '1.4rem', color: '#fff' }}>Simon Doe</h1>
+        <h1 style={{ fontSize: '1.4rem', color: '#fff' }}>Nicolas Garzón</h1>
       </Styled.HeaderWrapper>
       <Styled.Body ref={sectionRef}>
-        <Styled.HeaderTitle>Simon Doe</Styled.HeaderTitle>
+        <Styled.HeaderTitle>Nicolas Garzón</Styled.HeaderTitle>
         <Styled.NavbarWrapper>
           <Styled.ProfileImg src={profileImg} alt="Profile Image" />
           <Styled.Description>
-            Hi, my name is Simon Doe and I'm a senior software engineer. Welcome
-            to my personal website!
+            Hi, my name is Nicolas Garzón and I'm a Junior Frontend Developer.
+            Welcome to my personal website!
           </Styled.Description>
           <Styled.WrapperRedes>
             <Styled.RedesIcons>
-              <Link to="/twitter" style={{ color: '#54b689' }}>
+              <Link
+                to="https://twitter.com/Niico4_"
+                style={{ color: '#1363df' }}
+              >
                 <FaTwitter />
               </Link>
             </Styled.RedesIcons>
             <Styled.RedesIcons>
-              <Link to="/linkedin" style={{ color: '#54b689' }}>
+              <Link
+                to="https://www.linkedin.com/in/nicolasgarzon131/"
+                style={{ color: '#1363df' }}
+              >
                 <FaLinkedinIn />
               </Link>
             </Styled.RedesIcons>
             <Styled.RedesIcons>
-              <Link to="/github" style={{ color: '#54b689' }}>
+              <Link
+                to="https://github.com/Niico4/"
+                style={{ color: '#1363df' }}
+              >
                 <FaGithubAlt />
               </Link>
             </Styled.RedesIcons>
             <Styled.RedesIcons>
-              <Link to="overflow" style={{ color: '#54b689' }}>
+              <Link to="overflow" style={{ color: '#1363df' }}>
                 <FaStackOverflow />
               </Link>
             </Styled.RedesIcons>
             <Styled.RedesIcons>
-              <Link to="codepen" style={{ color: '#54b689' }}>
+              <Link to="codepen" style={{ color: '#1363df' }}>
                 <FaCodepen />
               </Link>
             </Styled.RedesIcons>
@@ -119,20 +128,6 @@ const Sidebar = () => {
             </Styled.Anclas>
             <Styled.Anclas>
               <Styled.AnclasLink
-                className={location.pathname === '/portfolio' ? 'active' : ''}
-                to="/portfolio"
-              >
-                <FaLaptopCode
-                  style={{
-                    marginRight: '0.5rem',
-                    verticalAlign: '-0.125em',
-                  }}
-                />
-                Portfolio
-              </Styled.AnclasLink>
-            </Styled.Anclas>
-            <Styled.Anclas>
-              <Styled.AnclasLink
                 className={location.pathname === '/resume' ? 'active' : ''}
                 to="/resume"
               >
@@ -143,6 +138,20 @@ const Sidebar = () => {
                   }}
                 />
                 Resume
+              </Styled.AnclasLink>
+            </Styled.Anclas>
+            <Styled.Anclas>
+              <Styled.AnclasLink
+                className={location.pathname === '/portfolio' ? 'active' : ''}
+                to="/portfolio"
+              >
+                <FaLaptopCode
+                  style={{
+                    marginRight: '0.5rem',
+                    verticalAlign: '-0.125em',
+                  }}
+                />
+                Portfolio
               </Styled.AnclasLink>
             </Styled.Anclas>
             {/* <Styled.Anclas>
