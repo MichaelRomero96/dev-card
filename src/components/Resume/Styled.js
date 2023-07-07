@@ -273,7 +273,7 @@ const Button = styled.button`
   transition: all 0.5s;
 
   &:hover {
-    background-color: #1363df;
+    background-color: ${colors.palette.secondary};
   }
 
   @media (${breakpoints.smDown}) {

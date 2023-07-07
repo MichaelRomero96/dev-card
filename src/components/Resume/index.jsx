@@ -5,6 +5,7 @@ import {
   FaFilePdf,
   FaGithub,
   FaGlobe,
+  FaJsSquare,
   FaLinkedinIn,
   FaMapMarkedAlt,
   FaPhoneSquare,

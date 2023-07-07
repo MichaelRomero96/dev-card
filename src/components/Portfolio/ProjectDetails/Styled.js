@@ -5,7 +5,7 @@ const { colors, breakpoints, fontSize, size } = theme;
 
 const WrapperDetails = styled.div`
   width: 100%;
-  background-color: ${colors.palette.tertiary};
+  background-color: ${colors.palette.gray};
   border: 1px solid #f3f3f3f3;
   padding: 30px;
   display: grid;
@@ -150,7 +150,6 @@ const TextFooter = styled.p`
   }
 
   @media (${breakpoints.smDown}) {
-    /* margin-left: 18px; */
     height: 80px;
   }
 `;
