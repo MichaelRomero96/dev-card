@@ -3,7 +3,8 @@ const personalProjects = [
     id: 0,
     title: 'Blog de Cafe',
     description: 'Un blog de cafe creado a base de HTML y CSS',
-    image: '/public/img/blogCafe.PNG',
+    image:
+      'https://res.cloudinary.com/ddcj7zkgy/image/upload/v1688781225/blogDeCafe.png',
     link: 'https://blog-coffe-html-css.netlify.app/',
     details: {
       purpose: 'Proyecto personal', // cual es el alcance del proyecto, ejemplo: freelance, personal, etc
@@ -40,7 +41,8 @@ const personalProjects = [
     id: 1,
     title: 'Formulario Animado con CSS',
     description: 'Formulario creado con animaciones de CSS',
-    image: '/public/img/formularioGrid.PNG',
+    image:
+      'https://res.cloudinary.com/ddcj7zkgy/image/upload/v1688781225/formAnimated.png',
     link: 'https://animated-form-css.netlify.app/',
     details: {
       purpose: 'Proyecto personal', // cual es el alcance del proyecto, ejemplo: freelance, personal, etc
@@ -76,7 +78,8 @@ const personalProjects = [
     id: 2,
     title: 'Página con FlexBox',
     description: 'Página creada con solo FlexBox, totalmente responsive',
-    image: '/public/img/paginaFlex.PNG',
+    image:
+      'https://res.cloudinary.com/ddcj7zkgy/image/upload/v1688781225/paginaFlex.png',
     link: 'https://page-only-flex.netlify.app/',
     details: {
       purpose: 'Proyecto personal', // cual es el alcance del proyecto, ejemplo: freelance, personal, etc
@@ -112,7 +115,8 @@ const personalProjects = [
     id: 3,
     title: 'Administrador de Pacientes con IndexDB',
     description: 'Administrador de Pacientes con base de datos (IndexDB) ',
-    image: '/public/img/pacientesIndexDb.PNG',
+    image:
+      'https://res.cloudinary.com/ddcj7zkgy/image/upload/v1688781225/administradorDePacientes.png',
     link: 'https://manage-patients-db.netlify.app/',
     details: {
       purpose: 'Proyecto personal', // cual es el alcance del proyecto, ejemplo: freelance, personal, etc
@@ -146,9 +150,10 @@ const personalProjects = [
   },
   {
     id: 4,
-    title: 'Validador de Usuarios',
+    title: 'Validador de Emails',
     description: 'Validador de Emails y Usuarios con JavaScript, HTML y CSS',
-    image: '/public/img/validadorEmail.PNG',
+    image:
+      'https://res.cloudinary.com/ddcj7zkgy/image/upload/v1688781225/validadorDeEmails.png',
     link: 'https://email-validator-js.netlify.app/',
     details: {
       purpose: 'Proyecto personal', // cual es el alcance del proyecto, ejemplo: freelance, personal, etc
@@ -184,7 +189,8 @@ const personalProjects = [
     title: 'Buscador de Carros',
     description:
       'Buscador de carros con un filtro para buscar con más exactitud.',
-    image: '/public/img/buscadorAutos.PNG',
+    image:
+      'https://res.cloudinary.com/ddcj7zkgy/image/upload/v1688781225/buscadorDeCarros.png',
     link: 'https://car-search-js.netlify.app/',
     details: {
       purpose: 'Proyecto personal', // cual es el alcance del proyecto, ejemplo: freelance, personal, etc
@@ -219,7 +225,8 @@ const personalProjects = [
     id: 6,
     title: 'Controlador de Tareas',
     description: 'Un controlador o recordador de tareas o notas',
-    image: '/public/img/misTaresLS.PNG',
+    image:
+      'https://res.cloudinary.com/ddcj7zkgy/image/upload/v1688781225/tareasLS.png',
     link: 'https://notes-localstorage.netlify.app/',
     details: {
       purpose: 'Proyecto personal', // cual es el alcance del proyecto, ejemplo: freelance, personal, etc
@@ -255,7 +262,8 @@ const personalProjects = [
     id: 7,
     title: 'Carrito de compras',
     description: 'Un carrito de compras, almacena tus compras.',
-    image: '/public/img/carrtioLS.PNG',
+    image:
+      'https://res.cloudinary.com/ddcj7zkgy/image/upload/v1688781225/carritoLS.png',
     link: 'https://shopping-car-ls.netlify.app/',
     details: {
       purpose: 'Proyecto personal', // cual es el alcance del proyecto, ejemplo: freelance, personal, etc
