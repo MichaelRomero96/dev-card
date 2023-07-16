@@ -323,14 +323,13 @@ const RedesIcons = styled.li`
 
 const ProfileImg = styled.img`
   max-width: 120px;
-  height: 100%;
+  min-height: 100%;
   margin-right: 3rem;
   border-radius: 50%;
 
   @media (${breakpoints.smDown}) {
     margin: 0 auto;
     margin-bottom: 2rem;
-    height: 20vh;
   }
 `;
 
