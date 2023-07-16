@@ -65,10 +65,6 @@ const WrapperMorePages = styled.ul`
     text-align: start;
     margin: 0.5rem auto 1rem;
     padding: 0 0 0 30px;
-    /* width: 93%; */
-    /* ----------- margin-top: 1rem;
-    flex-direction: row;
-    justify-content: space-between;-------------- */
   }
 `;
 
@@ -147,7 +143,7 @@ const RedesIcons = styled.li`
 
   &:hover {
     transform: scale(1.3);
-    background-color: #27b5ff;
+    background-color: ${colors.palette.tertiary};
   }
 `;
 

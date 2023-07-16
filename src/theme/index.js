@@ -8,17 +8,20 @@ const fontColors = {
   },
 
   title: {
-    normal: '#47B5FF',
+    normal: '#0E86D4',
   },
 };
 
 const colors = {
   fonts: fontColors,
   palette: {
-    primary: '#47B5FF',
-    secondary: '#1363df',
-    tertiary: '#FAFAFA',
+    primary: '#0E86D4',
+    secondary: '#003060',
+    tertiary: '#68BBE3',
     quaternary: '#0b212f',
+    darkest: '#000',
+    lightest: '#fff',
+    gray: '#FAFAFA',
   },
 };
 

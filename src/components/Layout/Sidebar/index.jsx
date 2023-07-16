@@ -4,6 +4,7 @@ import '../../css/sidebar.css';
 import { gsap } from 'gsap';
 import HamburgerButton from '../../../components/HamburgerIcon';
 import profileImg from '../../../../public/img/profileSidebarNico.png';
+import db from '../../../db';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import {
   FaTwitter,
@@ -34,9 +35,10 @@ const Sidebar = () => {
     if (sectionElement) {
       if (isSidebarOpen) {
         gsap.to(sectionElement, {
-          maxHeight: window.innerWidth > 900 ? '100vh' : '90vh',
+          maxHeight: window.innerWidth > 990 ? '100vh' : '90vh',
           display: 'block',
         });
+        return;
       } else {
         gsap.to(sectionElement, {
           maxHeight: 0,
@@ -48,8 +50,12 @@ const Sidebar = () => {
 
   useEffect(() => {
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 900) {
+      if (window.innerWidth < 990) {
+        setIsSidebarOpen(false);
+        return;
+      } else {
         setIsSidebarOpen(true);
+        return;
       }
     });
   });
@@ -57,7 +63,7 @@ const Sidebar = () => {
   const [open, setOpen] = useState(true);
 
   const location = useLocation();
-
+  const { aboutMe } = db;
   return (
     <div>
       <Styled.HeaderWrapper>
@@ -65,18 +71,15 @@ const Sidebar = () => {
         <h1 style={{ fontSize: '1.4rem', color: '#fff' }}>Nicolas Garzón</h1>
       </Styled.HeaderWrapper>
       <Styled.Body ref={sectionRef}>
-        <Styled.HeaderTitle>Nicolas Garzón</Styled.HeaderTitle>
+        <Styled.HeaderTitle>{aboutMe.sidebar.name}</Styled.HeaderTitle>
         <Styled.NavbarWrapper>
           <Styled.ProfileImg src={profileImg} alt="Profile Image" />
-          <Styled.Description>
-            Hi, my name is Nicolas Garzón and I'm a Junior Frontend Developer.
-            Welcome to my personal website!
-          </Styled.Description>
+          <Styled.Description>{aboutMe.sidebar.description}</Styled.Description>
           <Styled.WrapperRedes>
             <Styled.RedesIcons>
               <Link
                 to="https://twitter.com/Niico4_"
-                style={{ color: '#1363df' }}
+                style={{ color: '#003060' }}
               >
                 <FaTwitter />
               </Link>
@@ -84,7 +87,7 @@ const Sidebar = () => {
             <Styled.RedesIcons>
               <Link
                 to="https://www.linkedin.com/in/nicolasgarzon131/"
-                style={{ color: '#1363df' }}
+                style={{ color: '#003060' }}
               >
                 <FaLinkedinIn />
               </Link>
@@ -92,18 +95,18 @@ const Sidebar = () => {
             <Styled.RedesIcons>
               <Link
                 to="https://github.com/Niico4/"
-                style={{ color: '#1363df' }}
+                style={{ color: '#003060' }}
               >
                 <FaGithubAlt />
               </Link>
             </Styled.RedesIcons>
             <Styled.RedesIcons>
-              <Link to="overflow" style={{ color: '#1363df' }}>
+              <Link to="overflow" style={{ color: '#003060' }}>
                 <FaStackOverflow />
               </Link>
             </Styled.RedesIcons>
             <Styled.RedesIcons>
-              <Link to="codepen" style={{ color: '#1363df' }}>
+              <Link to="codepen" style={{ color: '#003060' }}>
                 <FaCodepen />
               </Link>
             </Styled.RedesIcons>
@@ -152,6 +155,20 @@ const Sidebar = () => {
                   }}
                 />
                 Portfolio
+              </Styled.AnclasLink>
+            </Styled.Anclas>
+            {/* <Styled.Anclas>
+              <Styled.AnclasLink
+                className={location.pathname === '/resume' ? 'active' : ''}
+                to="/resume"
+              >
+                <FaFileAlt
+                  style={{
+                    marginRight: '0.5rem',
+                    verticalAlign: '-0.125em',
+                  }}
+                />
+                Resume
               </Styled.AnclasLink>
             </Styled.Anclas>
             {/* <Styled.Anclas>

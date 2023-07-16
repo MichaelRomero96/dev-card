@@ -18,7 +18,7 @@ const ProjectDetails = () => {
       <div>
         <div
           style={{
-            backgroundColor: colors.palette.tertiary,
+            backgroundColor: colors.palette.gray,
             paddingTop: 50,
             paddingBottom: 30,
           }}
@@ -102,7 +102,7 @@ const ProjectDetails = () => {
                     style={{
                       marginBottom: '10px',
                       border: `1px solid #F3F3F3F3`,
-                      backgroundColor: colors.palette.tertiary,
+                      backgroundColor: colors.palette.gray,
                       padding: '10px',
                     }}
                   >

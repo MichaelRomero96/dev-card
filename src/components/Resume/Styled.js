@@ -273,7 +273,7 @@ const Button = styled.button`
   transition: all 0.5s;
 
   &:hover {
-    background-color: #1363df;
+    background-color: ${colors.palette.secondary};
   }
 
   @media (${breakpoints.smDown}) {
@@ -323,7 +323,7 @@ const RedesIcons = styled.li`
 
 const ProfileImg = styled.img`
   max-width: 120px;
-  height: 100%;
+  min-height: 100%;
   margin-right: 3rem;
   border-radius: 50%;
 

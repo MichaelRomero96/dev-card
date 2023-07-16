@@ -4,7 +4,7 @@ import theme from '../../../theme';
 const { colors, breakpoints, fontSize, size } = theme;
 
 const WrapperCard = styled.div`
-  background-color: ${colors.palette.tertiary};
+  background-color: ${colors.palette.gray};
   display: flex;
   gap: 20px;
   border: 1px solid #fffffff3;

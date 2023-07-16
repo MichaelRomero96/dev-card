@@ -32,6 +32,8 @@ const education = {
 
 const certifications = {
   name: 'Online Course Certifications',
+  javascript:
+    'https://www.udemy.com/certificate/UC-d99307af-48a3-46d2-9587-0fadd316a52d/',
   typeScript:
     'https://www.udemy.com/certificate/UC-0d2c70fe-ce8b-4a65-800c-89c6e62b97fc/',
   html: 'https://www.udemy.com/certificate/UC-b85f45c6-9e85-49ab-a2d7-ac8ca20ba6b4/',

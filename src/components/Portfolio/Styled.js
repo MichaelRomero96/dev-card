@@ -4,7 +4,6 @@ import theme from '../../theme';
 const { colors, breakpoints, fontSize, size } = theme;
 
 const WrapperContainer = styled.div`
-  background-color: ${colors.palette.tertiary};
   padding-top: 50;
   padding-bottom: 30;
 `;
