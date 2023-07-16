@@ -330,6 +330,7 @@ const ProfileImg = styled.img`
   @media (${breakpoints.smDown}) {
     margin: 0 auto;
     margin-bottom: 2rem;
+    height: 20vh;
   }
 `;
 
