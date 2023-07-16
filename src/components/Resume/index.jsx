@@ -259,14 +259,6 @@ const Resume = () => {
                   <ul>
                     <a
                       style={{ color: '#1363df' }}
-                      href="https://www.udemy.com/certificate/UC-0d2c70fe-ce8b-4a65-800c-89c6e62b97fc/"
-                    >
-                      <li style={{ marginBottom: '1rem' }}>
-                        {resume.certifications.typeScript}
-                      </li>
-                    </a>
-                    <a
-                      style={{ color: '#1363df' }}
                       href="https://www.udemy.com/certificate/UC-b85f45c6-9e85-49ab-a2d7-ac8ca20ba6b4/"
                     >
                       <li style={{ marginBottom: '1rem' }}>
@@ -277,7 +269,23 @@ const Resume = () => {
                       style={{ color: '#1363df' }}
                       href="https://www.udemy.com/certificate/UC-caa20bb8-b619-4753-96cf-89b04c307808/"
                     >
-                      <li>{resume.certifications.css}</li>
+                      <li style={{ marginBottom: '1rem' }}>
+                        {resume.certifications.css}
+                      </li>
+                    </a>
+                    <a
+                      style={{ color: '#1363df' }}
+                      href="https://www.udemy.com/certificate/UC-d99307af-48a3-46d2-9587-0fadd316a52d/"
+                    >
+                      <li style={{ marginBottom: '1rem' }}>
+                        {resume.certifications.javascript}
+                      </li>
+                    </a>
+                    <a
+                      style={{ color: '#1363df' }}
+                      href="https://www.udemy.com/certificate/UC-0d2c70fe-ce8b-4a65-800c-89c6e62b97fc/"
+                    >
+                      <li>{resume.certifications.typeScript}</li>
                     </a>
                   </ul>
                 </Styled.TextAwards>
